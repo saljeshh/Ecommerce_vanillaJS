@@ -1,0 +1,97 @@
+.footer {
+  padding: 1rem;
+
+  h1 {
+    text-align: left;
+    color: $color-background-white;
+    margin-bottom: 1rem;
+  }
+
+  background: $color-secondary;
+  @include flexAround(flex-start, center, column, 10);
+
+  &__contains {
+    @include flexAround(space-between, flex-start, row, 10);
+  }
+
+  &__form {
+    @include flexAround(space-between, flex-start, column, 10);
+    align-items: center;
+  }
+
+  &__address {
+    @include flexAround(null, null, row, 10);
+  }
+
+  &__location {
+    flex: 4;
+  }
+
+  &__maps-img {
+    height: 10rem;
+    cursor: pointer;
+  }
+
+  &__newsletter {
+    margin-bottom: 3rem;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  &__textarea {
+    outline: none;
+    border: 2px solid transparent;
+    padding: 0.5rem;
+    resize: none;
+
+    &:hover,
+    &:focus {
+      border: 2px solid $color-primary;
+    }
+  }
+
+  // payment
+  &__images-payment > img {
+    width: 5rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__welcome {
+    width: 25rem;
+    color: $color-background-white;
+    opacity: 0.8;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+      transition: all 0.2s ease;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    line-height: 1.2rem;
+    color: $color-background-white;
+    font-size: 0.8rem;
+
+    &:hover {
+      opacity: 0.5;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__copyright {
+    margin-top: 3rem;
+    color: $color-background-white;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+}

@@ -1,0 +1,53 @@
+.flash-sale {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  //for contains or container of all
+  &__contains {
+    background-color: $color-background-white;
+    padding: 0.5rem;
+  }
+
+  // for header
+  &__header {
+    @include flexAround(space-between, center, row, 4);
+    margin-bottom: 1.5rem;
+  }
+
+  &__left {
+    @include flexAround(flex-start, center, row, 50);
+  }
+
+  &__title {
+    font-size: 1rem;
+
+    &--sale {
+      color: $color-primary;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__ending-timer {
+    @include flexAround(flex-start, center, row, 10);
+  }
+
+  &__times {
+    @include flexAround(flex-start, center, row, 5);
+  }
+
+  &__time {
+    background-color: $color-primary;
+    padding: 0.2rem 0.3rem;
+    color: $color-background-white;
+  }
+
+  // for cards area
+  &__cards {
+    @include flexAround(center, center, row, 20);
+  }
+}

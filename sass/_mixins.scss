@@ -1,0 +1,7 @@
+@mixin flexAround($justify, $align, $direction, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap + px;
+}
