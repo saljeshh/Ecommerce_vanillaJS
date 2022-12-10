@@ -1,0 +1,43 @@
+.login {
+  padding: 3rem 0rem;
+  @include flexAround(space-between, center, column, 20);
+
+  &__form {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 5rem 2rem;
+    background-color: $color-background-white;
+    @include flexAround(space-between, center, column, 20);
+  }
+
+  &__group {
+    @include flexAround(null, null, column, 8);
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 15rem;
+    padding: 0.5rem;
+    height: 2rem;
+    outline: none;
+    border: 2px solid $color-background-gray;
+    transition: all 0.3s ease-in;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: 2px solid $color-primary;
+    }
+  }
+
+  &__end {
+    font-size: 0.8rem;
+  }
+
+  &__redirect {
+    color: $color-primary;
+  }
+}
