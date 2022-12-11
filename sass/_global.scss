@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: $color-primary;
+  color: $color-background-white;
+}
+
 body {
   font-size: 62.5%;
   background: $color-background-gray;
@@ -47,6 +52,11 @@ a {
     padding: 0.4rem 1rem;
   }
 
+  &--addtocart {
+    padding: 0.4rem 1.2rem;
+    background: $color-primary;
+  }
+
   &--seemore {
     background-color: $color-background-gray;
     color: $color-background-black;
@@ -61,6 +71,15 @@ a {
 
   &--login {
     padding: 0.4rem 1.2rem;
+  }
+
+  &--buynow {
+    background: $color-green;
+    padding: 0.4rem 0.6rem;
+
+    &:hover {
+      border: 1px solid $color-green;
+    }
   }
 }
 
