@@ -17,7 +17,7 @@
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      border: 2px solid #ff5c00;
+      box-shadow: 2px 2px 10px rgba($color-primary, 0.2);
       cursor: pointer;
       opacity: 0.8;
     }

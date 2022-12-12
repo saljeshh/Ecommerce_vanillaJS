@@ -45,6 +45,23 @@
     width: 20rem;
   }
 
+  &__quantity {
+    @include flexAround(flex-start, center, row, 10);
+    margin-top: 1rem;
+  }
+
+  &__btns {
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border: 1px solid $color-primary;
+    }
+  }
+
   &__description > * {
     margin-bottom: 0.5rem;
   }

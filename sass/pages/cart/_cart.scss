@@ -1,0 +1,87 @@
+.cart {
+  width: 100%;
+  padding: 1rem 0.2rem;
+
+  &__contains {
+    padding: 1rem 0.2rem;
+    background-color: $color-background-white;
+    @include flexAround(space-around, flex-start, row, 20);
+  }
+
+  &__row {
+    margin-bottom: 1rem;
+    @include flexAround(space-around, center, row, 10);
+  }
+
+  &__row:first-child {
+    background-color: rgba($color-primary, 0.8);
+    color: $color-background-white;
+    padding: 0.5rem 0.2rem;
+  }
+
+  &__row:not(:first-child) {
+    background-color: rgba($color-background-gray, 0.3);
+    padding: 0.4rem 0.2rem;
+  }
+
+  &__col {
+    @include flexAround(space-around, center, row, 10);
+    width: 5rem;
+
+    &--extra {
+      width: 10rem;
+    }
+  }
+
+  &__image {
+    width: 18px;
+  }
+
+  &__quantity {
+    @include flexAround(space-around, center, row, 8);
+  }
+
+  &__btns {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px solid $color-background-gray;
+    transition: all 0.5s ease-in-out;
+    background-color: $color-background-white;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__itemsincart {
+    padding: 1rem 2rem;
+  }
+
+  &__summary {
+    background-color: $color-background-gray;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    @include flexAround(center, center, column, 21);
+  }
+
+  &__coupoun {
+    outline: none;
+    font-size: 0.6rem;
+    padding: 0.3rem 0.3rem;
+    border: 1px solid $color-background-gray;
+    width: 70%;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__block {
+    @include flexAround(space-between, center, row, 8);
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
+  }
+}

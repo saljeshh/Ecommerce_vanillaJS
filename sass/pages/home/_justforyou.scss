@@ -9,9 +9,6 @@
 
   //for contains or container of all
   &__contains {
-    background-color: $color-background-white;
-    padding: 0.5rem;
-
     & > * {
       margin-bottom: 20px;
     }
@@ -22,11 +19,8 @@
     margin-top: 0.7rem;
   }
 
-  &__row1 {
-    margin-top: 20px;
-  }
-
   &__cards {
-    @include flexAround(center, center, row, 20);
+    @include flexAround(flex-start, center, row, 27);
+    flex-wrap: wrap;
   }
 }

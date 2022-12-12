@@ -68,47 +68,8 @@
 
     <div class="dummy"></div>
 
-    <div class="productdetail">
-      <div class="productdetail__contains container">
-        <div class="productdetail__showcase">
-          <div class="productdetail__window">
-            <img class="productdetail__image" src="../img/psm.jpg" alt="" />
-          </div>
-          <div class="productdetail__switches">
-            <div class="productdetail__switch">
-              <img class="productdetail__image" src="../img/psm.jpg" alt="" />
-            </div>
-            <div class="productdetail__switch">
-              <img class="productdetail__image" src="../img/psm.jpg" alt="" />
-            </div>
-            <div class="productdetail__switch">
-              <img class="productdetail__image" src="../img/psm.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="productdetail__description">
-          <div class="productdetail__title">Rich Dad Poor Dad</div>
-          <div class="productdetail__rating">*****</div>
-          <p class="productdetail__discounted-price">Rs. 560</p>
-          <p class="productdetail__original-price">
-            <span class="productdetail__cut">Rs. 980</span>
-            <span class="productdetail__dis">-58%</span>
-          </p>
-          <h3 class="productdetail__desc">Product Description</h3>
-          <article class="productdetail__specs">
-            Best selling book of history on finance. Rich Dad poor dad is one of
-            the book written which changed history and future of people who read
-            it.
-          </article>
-
-          <div class="productdetail__buttons">
-            <a href="../pages/checkout.html" class="btn btn--buynow">Buy Now</a>
-            <a href="../pages/cart.html" class="btn btn--addtocart"
-              >Add to Cart</a
-            >
-          </div>
-        </div>
-      </div>
+    <div class="productdetail" id="productdetail">
+      <!-- dynamic data -->
     </div>
 
     <footer class="footer">
@@ -169,7 +130,15 @@
                 <li><a href="#" class="footer__item">Postal - 56535</a></li>
               </ul>
             </div>
-            <img class="footer__maps-img" src="../img/map.png" alt="maps" />
+            <div class="footer__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56529.86267396126!2d85.2548953088037!3d27.682796529251952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187571338993%3A0x211e5d3145f31938!2sKirtipur%20Hospital%2C%20Kirtipur%20Ring%20Rd%2C%20Kathmandu%2044618!5e0!3m2!1sen!2snp!4v1670820566353!5m2!1sen!2snp"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
 
@@ -184,5 +153,7 @@
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
+
+    <script src="../js/product.js"></script>
   </body>
 </html>

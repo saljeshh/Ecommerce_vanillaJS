@@ -9,7 +9,7 @@
 
   //for contains or container of all
   &__contains {
-    background-color: $color-background-white;
+    background-color: $color-background-gray;
     padding: 0.5rem;
   }
 
@@ -17,6 +17,8 @@
   &__header {
     @include flexAround(space-between, center, row, 4);
     margin-bottom: 1.5rem;
+    background-color: rgba($color-background-white, 0.9);
+    padding: 1rem 1rem;
   }
 
   &__left {
@@ -48,6 +50,7 @@
 
   // for cards area
   &__cards {
-    @include flexAround(center, center, row, 20);
+    @include flexAround(space-between, center, row, 20);
+    flex-wrap: wrap;
   }
 }
