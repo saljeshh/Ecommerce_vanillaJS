@@ -41,3 +41,14 @@
     color: $color-primary;
   }
 }
+
+@media (max-width: 768px) {
+  .login {
+    &__input {
+      width: 15rem;
+      padding: 0.5rem;
+      height: 2rem;
+      font-size: 0.7rem;
+    }
+  }
+}

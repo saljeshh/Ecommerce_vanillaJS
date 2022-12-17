@@ -71,15 +71,14 @@
 .footer {
   padding: 1rem;
   width: 100%;
+  background: $color-secondary;
+  @include flexAround(flex-start, center, column, 10);
 
   h1 {
     text-align: left;
     color: $color-background-white;
     margin-bottom: 1rem;
   }
-
-  background: $color-secondary;
-  @include flexAround(flex-start, center, column, 10);
 
   &__contains {
     @include flexAround(space-between, flex-start, row, 10);
@@ -91,16 +90,12 @@
   }
 
   &__address {
-    @include flexAround(null, null, row, 10);
-  }
-
-  &__location {
-    flex: 2;
+    @include flexAround(space-between, null, row, 10);
   }
 
   &__map {
     height: 12rem;
-    width: 12rem;
+    width: 15rem;
   }
 
   &__newsletter {
@@ -125,7 +120,7 @@
 
   // payment
   &__images-payment > img {
-    width: 5rem;
+    height: 2.3rem;
     background-color: white;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -136,11 +131,11 @@
   }
 
   &__welcome {
-    width: 25rem;
     color: $color-background-white;
     opacity: 0.8;
     font-size: 0.8rem;
     margin-bottom: 2rem;
+    margin-right: 1rem;
 
     &:hover {
       transition: all 0.2s ease;
@@ -164,5 +159,249 @@
     color: $color-background-white;
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    h1 {
+      text-align: left;
+      color: $color-background-white;
+      margin-bottom: 1rem;
+    }
+
+    &__contains {
+      @include flexAround(space-between, flex-start, row, 10);
+    }
+
+    &__form {
+      @include flexAround(space-around, flex-start, row, 10);
+      align-items: center;
+    }
+
+    &__newsletter {
+      padding: 0.2rem;
+    }
+
+    &__copyright {
+      margin-top: 2rem;
+      padding: 0.2rem 0.5rem;
+    }
+
+    &__map {
+      height: 12rem;
+      width: 12rem;
+    }
+
+    // payment
+    &__images-payment > img {
+      height: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__top {
+      font-size: 0.6rem;
+    }
+
+    &__input {
+      width: 13rem;
+      height: 1rem;
+      padding: 0.6rem;
+    }
+
+    &__inner {
+      padding: 5px;
+    }
+
+    &__img {
+      height: 0.8rem;
+
+      &--cart {
+        height: 1.3rem;
+      }
+    }
+  }
+
+  .dummy {
+    height: 53px;
+  }
+  .footer {
+    font-size: 0.5rem;
+
+    &__map {
+      height: 8rem;
+      width: 8rem;
+    }
+
+    &__item {
+      font-size: 0.6rem;
+      margin-right: 2rem;
+    }
+
+    &__welcome {
+      font-size: 0.6rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+
+    &__images-payment > img {
+      height: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    &__top {
+      font-size: 0.5rem;
+    }
+    &__search-cart {
+      @include flexAround(center, center, row, 10);
+    }
+
+    &__input {
+      font-size: 0.5rem;
+      width: 7rem;
+      height: 1rem;
+      padding: 0.6rem;
+    }
+
+    &__inner {
+      padding: 5px;
+    }
+
+    &__img {
+      height: 0.5rem;
+
+      &--cart {
+        height: 0.8rem;
+      }
+    }
+  }
+
+  .dummy {
+    height: 50px;
+  }
+  .footer {
+    font-size: 0.5rem;
+
+    &__map {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    &__item {
+      font-size: 0.5rem;
+    }
+
+    &__location {
+      width: 7rem;
+    }
+
+    &__welcome {
+      font-size: 0.6rem;
+      margin-bottom: 0.6rem;
+      margin-right: 1rem;
+    }
+
+    &__images-payment > img {
+      height: 1rem;
+    }
+
+    &__textarea {
+      padding: 0.2rem;
+      font-size: 0.6rem;
+    }
+
+    h1 {
+      margin-bottom: 0.7rem;
+    }
+
+    &__items {
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    &__top {
+      font-size: 0.4rem;
+    }
+    &__inner {
+      padding: 10px;
+      @include flexAround(space-between, center, column, 5);
+    }
+    &__search-cart {
+      @include flexAround(center, center, row, 10);
+    }
+
+    &__input {
+      font-size: 0.5rem;
+      width: 9rem;
+      height: 1rem;
+      padding: 0.6rem;
+    }
+
+    &__inner {
+      padding: 5px;
+    }
+
+    &__img {
+      height: 0.7rem;
+
+      &--cart {
+        height: 0.9rem;
+      }
+    }
+  }
+
+  .dummy {
+    height: 90px;
+  }
+  .footer {
+    font-size: 0.7rem;
+    &__contains {
+      @include flexAround(space-between, null, column, 10);
+    }
+    &__map {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    &__item {
+      font-size: 0.5rem;
+    }
+
+    &__location {
+      width: 12rem;
+    }
+
+    &__welcome {
+      font-size: 0.6rem;
+      margin-bottom: 0.6rem;
+      margin-right: 1rem;
+    }
+
+    &__images-payment > img {
+      height: 1.5rem;
+    }
+
+    &__textarea {
+      padding: 0.2rem;
+      font-size: 0.6rem;
+    }
+
+    h1 {
+      margin-bottom: 0.7rem;
+    }
+
+    &__items {
+      font-size: 1.2rem;
+      margin-bottom: 0rem;
+    }
   }
 }

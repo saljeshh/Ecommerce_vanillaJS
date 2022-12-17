@@ -115,3 +115,63 @@
     font-size: 0.7rem;
   }
 }
+
+@media (max-width: 430px) {
+  .productdetail {
+    &__contains {
+      padding: 3rem 3rem;
+      @include flexAround(space-around, center, column, 40);
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .productdetail {
+    &__contains {
+      padding: 3rem 3rem;
+      @include flexAround(space-around, center, column, 40);
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__rating {
+      font-size: 1rem;
+    }
+
+    &__discounted-price {
+      font-size: 1.3rem;
+    }
+
+    &__original-price {
+      font-size: 0.8rem;
+    }
+
+    &__cut {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    &__description {
+      padding: 1rem;
+    }
+
+    &__dis {
+      font-size: 0.9rem;
+    }
+
+    &__buttons {
+      margin-top: 1rem;
+      font-size: 0.6rem;
+    }
+
+    &__desc {
+      font-size: 0.9rem;
+    }
+
+    &__specs {
+      font-size: 0.6rem;
+    }
+  }
+}

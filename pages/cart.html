@@ -71,118 +71,18 @@
     <div class="cart">
       <div class="cart__contains container">
         <div class="cart__itemsincart">
-          <div class="cart__row">
-            <div class="cart__col">S.N</div>
+          <div class="cart__rowheader">
             <div class="cart__col cart__col--extra">Items in Cart</div>
             <div class="cart__col">Unit Price</div>
             <div class="cart__col">Quantity</div>
             <div class="cart__col">Total</div>
             <div class="cart__col">Edit</div>
           </div>
-
-          <div class="cart__row">
-            <div class="cart__col">1.</div>
-            <div class="cart__col cart__col--extra">
-              <img src="../img/psm.jpg" alt="" class="cart__image" />
-              <p>Rich Dad Poor Dad</p>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <div class="cart__quantity">
-                <button class="cart__btns btn-quantity">-</button>
-                <p class="cart__number">1</p>
-                <button class="cart__btns btn-quantity">+</button>
-              </div>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <button class="btn btn--remove">remove</button>
-            </div>
-          </div>
-
-          <div class="cart__row">
-            <div class="cart__col">2.</div>
-            <div class="cart__col cart__col--extra">
-              <img src="../img/psm.jpg" alt="" class="cart__image" />
-              <p>Rich Dad Poor Dad</p>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <div class="cart__quantity">
-                <button class="cart__btns btn-quantity">-</button>
-                <p class="cart__number">1</p>
-                <button class="cart__btns btn-quantity">+</button>
-              </div>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <button class="btn btn--remove">remove</button>
-            </div>
-          </div>
-
-          <div class="cart__row">
-            <div class="cart__col">3.</div>
-            <div class="cart__col cart__col--extra">
-              <img src="../img/psm.jpg" alt="" class="cart__image" />
-              <p>Rich Dad Poor Dad</p>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <div class="cart__quantity">
-                <button class="cart__btns btn-quantity">-</button>
-                <p class="cart__number">1</p>
-                <button class="cart__btns btn-quantity">+</button>
-              </div>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <button class="btn btn--remove">remove</button>
-            </div>
-          </div>
-
-          <div class="cart__row">
-            <div class="cart__col">4.</div>
-            <div class="cart__col cart__col--extra">
-              <img src="../img/psm.jpg" alt="" class="cart__image" />
-              <p>Rich Dad Poor Dad</p>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <div class="cart__quantity">
-                <button class="cart__btns btn-quantity">-</button>
-                <p class="cart__number">1</p>
-                <button class="cart__btns btn-quantity">+</button>
-              </div>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <button class="btn btn--remove">remove</button>
-            </div>
-          </div>
-
-          <div class="cart__row">
-            <div class="cart__col">5.</div>
-            <div class="cart__col cart__col--extra">
-              <img src="../img/psm.jpg" alt="" class="cart__image" />
-              <p>Rich Dad Poor Dad</p>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <div class="cart__quantity">
-                <button class="cart__btns btn-quantity">-</button>
-                <p class="cart__number">1</p>
-                <button class="cart__btns btn-quantity">+</button>
-              </div>
-            </div>
-            <div class="cart__col">Rs. 865</div>
-            <div class="cart__col">
-              <button class="btn btn--remove">remove</button>
-            </div>
-          </div>
+          <div class="cart__rows" id="itemsincart"></div>
         </div>
 
         <!-- summary section -->
-        <div class="cart__summary">
+        <div class="cart__summary" id="summary">
           <h1>Summary</h1>
           <div class="cart__contain">
             <div class="cart__block">
@@ -260,31 +160,29 @@
           <h1>Location Details</h1>
           <div class="footer__address">
             <div class="footer__location">
+              <div class="footer__welcome">
+                <p>Thank you for visiting our site 🙌</p>
+                <br />
+                <p>
+                  Our official shop is located<br />
+                  in kirtipur area, you can always call us if you have any<br />
+                  questions. You are always welcome to our shop thank you.
+                </p>
+              </div>
               <ul class="footer__items">
-                <div class="footer__welcome">
-                  <p>Thank you for visiting our site 🙌</p>
-                  <br />
-                  <p>
-                    Our official shop is located in kirtipur area, you can
-                    always call us if you have any questions. You are always
-                    welcome to our shop thank you.
-                  </p>
-                </div>
                 <li><a href="#" class="footer__item">kathmandu, Nepal</a></li>
                 <li><a href="#" class="footer__item">kirtipur - 2</a></li>
                 <li><a href="#" class="footer__item">Postal - 56535</a></li>
               </ul>
             </div>
-            <div class="footer__map-place">
-              <iframe
-                class="footer__map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56529.86267396126!2d85.2548953088037!3d27.682796529251952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187571338993%3A0x211e5d3145f31938!2sKirtipur%20Hospital%2C%20Kirtipur%20Ring%20Rd%2C%20Kathmandu%2044618!5e0!3m2!1sen!2snp!4v1670820566353!5m2!1sen!2snp"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+            <iframe
+              class="footer__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56529.86267396126!2d85.2548953088037!3d27.682796529251952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb187571338993%3A0x211e5d3145f31938!2sKirtipur%20Hospital%2C%20Kirtipur%20Ring%20Rd%2C%20Kathmandu%2044618!5e0!3m2!1sen!2snp!4v1670820566353!5m2!1sen!2snp"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
 
@@ -292,12 +190,14 @@
           <h1>Payments</h1>
 
           <div class="footer__images-payment">
-            <img src="./img/esewa.png" alt="" />
-            <img src="./img/khalti.png" alt="" />
+            <img src="../img/esewa.png" alt="" />
+            <img src="../img/khalti.png" alt="" />
           </div>
         </div>
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
   </body>
+  <script src="../js/cart.js"></script>
+  i
 </html>

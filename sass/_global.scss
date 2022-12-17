@@ -7,7 +7,8 @@
 }
 
 ::selection {
-  background-color: $color-primary;
+  background-color: $color-background-black;
+  padding: 0.3rem;
   color: $color-background-white;
 }
 
@@ -139,8 +140,124 @@ a {
   }
 
   &__rating {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     letter-spacing: 0.3rem;
     color: $color-yellow;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 950px;
+  }
+
+  .card {
+    width: 9rem;
+    height: 16rem;
+    padding: 0.3rem 0.4rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 0.8rem;
+    background-color: $color-background-white;
+
+    &__image {
+      margin-bottom: 0.6rem;
+      height: 9rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 700px;
+  }
+
+  .btn {
+    &--search {
+      padding: 0.19rem 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  .card {
+    width: 8rem;
+    height: 15rem;
+    &__image {
+      margin-bottom: 0.6rem;
+      height: 8rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: 400px;
+  }
+
+  .btn {
+    &--search {
+      padding: 0.3rem 0.3rem;
+      font-size: 0.5rem;
+    }
+    &--feedback {
+      padding: 0.1rem 0.4rem;
+    }
+  }
+
+  .card {
+    font-size: 0.6rem;
+    width: 7.5rem;
+    height: 13rem;
+    &__image {
+      margin-bottom: 0.6rem;
+      height: 7rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__rating {
+      font-size: 0.6rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
+
+  .btn {
+    &--search {
+      padding: 0.3rem 0.3rem;
+      font-size: 0.5rem;
+    }
+    &--feedback {
+      padding: 0.1rem 0.4rem;
+    }
+  }
+
+  .card {
+    font-size: 0.6rem;
+    width: 8.5rem;
+    height: 15rem;
+    &__image {
+      margin-bottom: 0.6rem;
+      height: 10rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }

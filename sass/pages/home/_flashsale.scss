@@ -54,3 +54,81 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 1024px) {
+  .flash-sale {
+    &__header {
+      padding: 0.8rem 0.8rem;
+    }
+
+    &__cards {
+      @include flexAround(space-between, center, row, 10);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .flash-sale {
+    &__header {
+      padding: 0.5rem 0.8rem;
+    }
+
+    &__cards {
+      @include flexAround(flex-start, center, row, 10);
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .flash-sale {
+    &__header {
+      padding: 0.5rem 0.7rem;
+    }
+
+    &__left {
+      @include flexAround(flex-start, center, row, 30);
+    }
+
+    &__cards {
+      @include flexAround(flex-start, center, row, 10);
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 0.6rem;
+    }
+
+    &__time {
+      font-size: 0.6rem;
+      padding: 0.1rem 0.2rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .flash-sale {
+    &__header {
+      padding: 0.5rem 0.7rem;
+    }
+
+    &__cards {
+      @include flexAround(flex-start, center, row, 10);
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 0.5rem;
+    }
+
+    &__time {
+      font-size: 0.6rem;
+      padding: 0.1rem 0.2rem;
+    }
+  }
+}

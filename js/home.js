@@ -11,7 +11,7 @@ window.addEventListener('load', async () => {
   res.forEach((item) => {
     let ratingNum = '';
 
-    for (let i = 1; i <= item.rating; i++) ratingNum += '*';
+    for (let i = 1; i <= item.rating; i++) ratingNum += '⭐';
 
     if (item.flashSale) {
       flashData += `
@@ -44,7 +44,7 @@ window.addEventListener('load', async () => {
   res.forEach((item) => {
     let ratingNum = '';
 
-    for (let i = 1; i <= item.rating; i++) ratingNum += '*';
+    for (let i = 1; i <= item.rating; i++) ratingNum += '⭐';
 
     justforyouData += `
       <a class="card" href="./pages/productDetail.html?id=${item.id}">

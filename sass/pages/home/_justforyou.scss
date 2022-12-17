@@ -24,3 +24,21 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 1024px) {
+  .justforyou {
+    &__cards {
+      @include flexAround(space-between, center, row, 15);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .justforyou {
+    &__cards {
+      @include flexAround(flex-start, center, row, 15);
+      flex-wrap: wrap;
+    }
+  }
+}

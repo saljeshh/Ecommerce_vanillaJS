@@ -3,29 +3,28 @@
   padding: 1rem 0.2rem;
 
   &__contains {
-    padding: 1rem 0.2rem;
+    padding: 3rem 0.2rem;
     background-color: $color-background-white;
     @include flexAround(space-around, flex-start, row, 20);
+  }
+
+  &__rowheader {
+    background-color: rgba($color-primary, 0.8);
+    color: $color-background-white;
+    padding: 0.5rem 0.2rem;
+    margin-bottom: 1rem;
+    @include flexAround(space-around, center, row, 10);
   }
 
   &__row {
     margin-bottom: 1rem;
     @include flexAround(space-around, center, row, 10);
-  }
-
-  &__row:first-child {
-    background-color: rgba($color-primary, 0.8);
-    color: $color-background-white;
-    padding: 0.5rem 0.2rem;
-  }
-
-  &__row:not(:first-child) {
     background-color: rgba($color-background-gray, 0.3);
     padding: 0.4rem 0.2rem;
   }
 
   &__col {
-    @include flexAround(space-around, center, row, 10);
+    @include flexAround(flex-start, center, row, 10);
     width: 5rem;
 
     &--extra {
@@ -57,11 +56,12 @@
 
   &__itemsincart {
     padding: 1rem 2rem;
+    min-height: 20rem;
   }
 
   &__summary {
     background-color: $color-background-gray;
-    padding: 1rem 1rem;
+    padding: 2rem 2rem;
     margin-top: 2rem;
     @include flexAround(center, center, column, 21);
   }
@@ -83,5 +83,91 @@
     @include flexAround(space-between, center, row, 8);
     margin-bottom: 1rem;
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    &__contains {
+      padding: 3rem 0.2rem;
+      @include flexAround(space-around, center, column, 20);
+    }
+
+    &__summary {
+      width: 75%;
+      padding: 2rem 2rem;
+      margin-top: 2rem;
+      @include flexAround(center, center, column, 25);
+    }
+
+    &__block {
+      @include flexAround(space-between, center, row, 100);
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+    }
+    &__label {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .cart {
+    &__contains {
+      padding: 0.1rem 0.1rem;
+      @include flexAround(space-around, center, column, 20);
+    }
+    &__itemsincart {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      min-height: 20rem;
+    }
+
+    &__rowheader {
+      padding: 0.5rem 0.2rem;
+      @include flexAround(space-around, center, row, 10);
+    }
+
+    &__summary {
+      width: 80%;
+      padding: 1rem 1rem;
+      margin-top: 2rem;
+      @include flexAround(center, center, column, 25);
+    }
+
+    &__block {
+      @include flexAround(space-between, center, row, 30);
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+    }
+    &__label {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .cart {
+    &__contains {
+      padding: 0.1rem 0.1rem;
+      @include flexAround(space-around, center, column, 20);
+    }
+    &__itemsincart {
+      font-size: 0.6rem;
+      width: 100%;
+      padding: 1rem 0.2rem;
+      min-height: 20rem;
+    }
+
+    &__rowheader {
+      padding: 0.5rem 0.2rem;
+      @include flexAround(space-around, center, row, 10);
+    }
+
+    &__block {
+      @include flexAround(space-between, center, row, 30);
+      margin-bottom: 0.5rem;
+      font-size: 0.6rem;
+    }
   }
 }
