@@ -137,6 +137,10 @@ a {
   .container {
     width: 950px;
   }
+  .btn--seemore {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.6rem;
+  }
   .card {
     width: 9rem;
     height: 16rem;
@@ -163,6 +167,13 @@ a {
     padding: 0.19rem 0.6rem;
     font-size: 0.8rem;
   }
+  .btn--feedback {
+    padding: 0.1rem 0.4rem;
+  }
+  .btn--seemore {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.5rem;
+  }
   .card {
     width: 8rem;
     height: 15rem;
@@ -181,14 +192,14 @@ a {
     width: 400px;
   }
   .btn--search {
-    padding: 0.3rem 0.3rem;
-    font-size: 0.5rem;
+    padding: 0.3rem 0.2rem;
+    font-size: 0.4rem;
   }
   .btn--feedback {
     padding: 0.1rem 0.4rem;
   }
   .btn--seemore {
-    padding: 0.3rem 0.3rem;
+    padding: 0.2rem 0.2rem;
     font-size: 0.5rem;
   }
   .card {
@@ -211,22 +222,22 @@ a {
 }
 @media (max-width: 376px) {
   .container {
-    width: 350px;
+    width: 320px;
   }
   .btn--search {
-    padding: 0.3rem 0.3rem;
-    font-size: 0.5rem;
+    padding: 0.2rem 0.2rem;
+    font-size: 0.4rem;
   }
   .btn--feedback {
     padding: 0.1rem 0.4rem;
   }
   .btn--seemore {
-    padding: 0.3rem 0.3rem;
-    font-size: 0.5rem;
+    padding: 0.2rem 0.2rem;
+    font-size: 0.4rem;
   }
   .card {
     font-size: 0.6rem;
-    width: 9.5rem;
+    width: 9rem;
     height: 15rem;
   }
   .card__image {
@@ -243,15 +254,15 @@ a {
     width: 300px;
   }
   .btn--search {
-    padding: 0.3rem 0.3rem;
-    font-size: 0.5rem;
+    padding: 0.2rem 0.2rem;
+    font-size: 0.4rem;
   }
   .btn--feedback {
     padding: 0.1rem 0.4rem;
   }
   .btn--seemore {
-    padding: 0.3rem 0.3rem;
-    font-size: 0.5rem;
+    padding: 0.2rem 0.2rem;
+    font-size: 0.4rem;
   }
   .card {
     font-size: 0.6rem;
@@ -277,6 +288,13 @@ a {
   background: #e7e7e7;
   padding: 0.2rem;
   font-size: 0.8rem;
+}
+.header__searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
 }
 .header__left {
   display: flex;
@@ -324,7 +342,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 30px;
+  gap: 70px;
 }
 .header__input {
   width: 20rem;
@@ -343,7 +361,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: px;
+  gap: 7px;
 }
 .header__img {
   height: 1.3rem;
@@ -448,6 +466,23 @@ a {
 }
 
 @media (max-width: 1024px) {
+  .header__search-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .header__input {
+    width: 15rem;
+  }
+  .header__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 60px;
+  }
   .footer h1 {
     text-align: left;
     color: #ffffff;
@@ -487,10 +522,25 @@ a {
   .header__top {
     font-size: 0.6rem;
   }
+  .header__search-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .header__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+  }
   .header__input {
-    width: 13rem;
+    width: 10rem;
     height: 1rem;
     padding: 0.6rem;
+    font-size: 0.6rem;
   }
   .header__inner {
     padding: 5px;
@@ -529,6 +579,14 @@ a {
     font-size: 0.5rem;
     padding: 0.3rem;
   }
+  .header__inner {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
   .header__left {
     display: flex;
     justify-content: center;
@@ -537,10 +595,10 @@ a {
     gap: 70px;
   }
   .header__greeting {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
   }
   .header__welcometxt {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     margin-right: 0.2rem;
   }
   .header__right {
@@ -548,7 +606,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
   }
   .header__items {
     display: flex;
@@ -566,9 +624,9 @@ a {
   }
   .header__input {
     font-size: 0.5rem;
-    width: 7rem;
-    height: 1rem;
-    padding: 0.6rem;
+    width: 10rem;
+    height: 0.5rem;
+    padding: 0.5rem;
   }
   .header__inner {
     padding: 5px;
@@ -580,7 +638,7 @@ a {
     height: 0.8rem;
   }
   .dummy {
-    height: 50px;
+    height: 65px;
   }
   .footer {
     font-size: 0.5rem;
@@ -616,7 +674,7 @@ a {
 }
 @media (max-width: 376px) {
   .header__top {
-    font-size: 0.56rem;
+    font-size: 0.4rem;
   }
   .header__inner {
     padding: 10px;
@@ -633,11 +691,18 @@ a {
     flex-direction: row;
     gap: 10px;
   }
+  .header__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 7px;
+  }
   .header__input {
     font-size: 0.5rem;
-    width: 9rem;
-    height: 1rem;
-    padding: 0.6rem;
+    width: 10rem;
+    height: 0.5rem;
+    padding: 0.4rem;
   }
   .header__inner {
     padding: 5px;
@@ -649,7 +714,7 @@ a {
     height: 0.9rem;
   }
   .dummy {
-    height: 89px;
+    height: 60px;
   }
   .footer {
     font-size: 0.7rem;
@@ -694,6 +759,9 @@ a {
   .header__top {
     font-size: 0.4rem;
   }
+  .header__left {
+    margin-bottom: 0.4rem;
+  }
   .header__inner {
     padding: 10px;
     display: flex;
@@ -701,6 +769,20 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 5px;
+  }
+  .header__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 7px;
+  }
+  .header__greeting {
+    font-size: 0.5rem;
+  }
+  .header__welcometxt {
+    font-size: 0.5rem;
+    margin-right: 0.2rem;
   }
   .header__search-cart {
     display: flex;
@@ -711,9 +793,9 @@ a {
   }
   .header__input {
     font-size: 0.5rem;
-    width: 9rem;
-    height: 1rem;
-    padding: 0.6rem;
+    width: 10rem;
+    height: 0.5rem;
+    padding: 0.4rem;
   }
   .header__inner {
     padding: 5px;
@@ -725,7 +807,7 @@ a {
     height: 0.9rem;
   }
   .dummy {
-    height: 86px;
+    height: 70px;
   }
   .footer {
     font-size: 0.7rem;
@@ -1028,7 +1110,7 @@ a {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
   }
   .flash-sale__title {
@@ -1111,7 +1193,7 @@ a {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    gap: 30px;
+    gap: 15px;
     flex-wrap: wrap;
   }
 }

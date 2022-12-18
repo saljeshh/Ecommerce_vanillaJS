@@ -46,7 +46,7 @@
 @media (max-width: 376px) {
   .justforyou {
     &__cards {
-      @include flexAround(flex-start, center, row, 30);
+      @include flexAround(flex-start, center, row, 15);
       flex-wrap: wrap;
     }
   }

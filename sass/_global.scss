@@ -151,6 +151,13 @@ a {
     width: 950px;
   }
 
+  .btn {
+    &--seemore {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.6rem;
+    }
+  }
+
   .card {
     width: 9rem;
     height: 16rem;
@@ -181,6 +188,14 @@ a {
       padding: 0.19rem 0.6rem;
       font-size: 0.8rem;
     }
+
+    &--feedback {
+      padding: 0.1rem 0.4rem;
+    }
+    &--seemore {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.5rem;
+    }
   }
 
   .card {
@@ -204,14 +219,14 @@ a {
 
   .btn {
     &--search {
-      padding: 0.3rem 0.3rem;
-      font-size: 0.5rem;
+      padding: 0.3rem 0.2rem;
+      font-size: 0.4rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
     }
     &--seemore {
-      padding: 0.3rem 0.3rem;
+      padding: 0.2rem 0.2rem;
       font-size: 0.5rem;
     }
   }
@@ -238,26 +253,26 @@ a {
 
 @media (max-width: 376px) {
   .container {
-    width: 350px;
+    width: 320px;
   }
 
   .btn {
     &--search {
-      padding: 0.3rem 0.3rem;
-      font-size: 0.5rem;
+      padding: 0.2rem 0.2rem;
+      font-size: 0.4rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
     }
     &--seemore {
-      padding: 0.3rem 0.3rem;
-      font-size: 0.5rem;
+      padding: 0.2rem 0.2rem;
+      font-size: 0.4rem;
     }
   }
 
   .card {
     font-size: 0.6rem;
-    width: 9.5rem;
+    width: 9rem;
     height: 15rem;
     &__image {
       margin-bottom: 0.6rem;
@@ -277,16 +292,16 @@ a {
 
   .btn {
     &--search {
-      padding: 0.3rem 0.3rem;
-      font-size: 0.5rem;
+      padding: 0.2rem 0.2rem;
+      font-size: 0.4rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
     }
 
     &--seemore {
-      padding: 0.3rem 0.3rem;
-      font-size: 0.5rem;
+      padding: 0.2rem 0.2rem;
+      font-size: 0.4rem;
     }
   }
 

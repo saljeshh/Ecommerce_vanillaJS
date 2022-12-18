@@ -11,6 +11,10 @@
     // box-shadow: 0px 15px 5px $color-background-black;
   }
 
+  &__searchbar {
+    @include flexAround(center, center, row, 5);
+  }
+
   &__left {
     @include flexAround(center, center, row, 80);
   }
@@ -48,7 +52,7 @@
   }
 
   &__search-cart {
-    @include flexAround(center, center, row, 30);
+    @include flexAround(center, center, row, 70);
   }
 
   &__input {
@@ -68,7 +72,7 @@
 
   &__inner {
     padding: 10px;
-    @include flexAround(space-between, center, row, null);
+    @include flexAround(space-between, center, row, 7);
   }
 
   &__img {
@@ -182,6 +186,23 @@
 }
 
 @media (max-width: 1024px) {
+  .header {
+    &__search-cart {
+      @include flexAround(center, center, row, 30);
+    }
+
+    &__input {
+      width: 15rem;
+      // height: 1rem;
+      // padding: 0.6rem;
+      // font-size: 0.6rem;
+    }
+
+    &__left {
+      @include flexAround(center, center, row, 60);
+    }
+  }
+
   .footer {
     h1 {
       text-align: left;
@@ -225,10 +246,19 @@
       font-size: 0.6rem;
     }
 
+    &__search-cart {
+      @include flexAround(center, center, row, 10);
+    }
+
+    &__left {
+      @include flexAround(center, center, row, 40);
+    }
+
     &__input {
-      width: 13rem;
+      width: 10rem;
       height: 1rem;
       padding: 0.6rem;
+      font-size: 0.6rem;
     }
 
     &__inner {
@@ -279,21 +309,26 @@
       padding: 0.3rem;
     }
 
+    &__inner {
+      padding: 10px;
+      @include flexAround(space-between, center, column, 5);
+    }
+
     &__left {
       @include flexAround(center, center, row, 70);
     }
 
     &__greeting {
-      font-size: 0.4rem;
+      font-size: 0.6rem;
     }
 
     &__welcometxt {
-      font-size: 0.4rem;
+      font-size: 0.6rem;
       margin-right: 0.2rem;
     }
 
     &__right {
-      @include flexAround(center, center, row, 5);
+      @include flexAround(center, center, row, 10);
     }
 
     &__items {
@@ -306,9 +341,9 @@
 
     &__input {
       font-size: 0.5rem;
-      width: 7rem;
-      height: 1rem;
-      padding: 0.6rem;
+      width: 10rem;
+      height: 0.5rem;
+      padding: 0.5rem;
     }
 
     &__inner {
@@ -325,7 +360,7 @@
   }
 
   .dummy {
-    height: 50px;
+    height: 65px;
   }
   .footer {
     font-size: 0.5rem;
@@ -371,7 +406,7 @@
 @media (max-width: 376px) {
   .header {
     &__top {
-      font-size: 0.56rem;
+      font-size: 0.4rem;
     }
     &__inner {
       padding: 10px;
@@ -381,11 +416,15 @@
       @include flexAround(center, center, row, 10);
     }
 
+    &__right {
+      @include flexAround(center, center, row, 7);
+    }
+
     &__input {
       font-size: 0.5rem;
-      width: 9rem;
-      height: 1rem;
-      padding: 0.6rem;
+      width: 10rem;
+      height: 0.5rem;
+      padding: 0.4rem;
     }
 
     &__inner {
@@ -402,7 +441,7 @@
   }
 
   .dummy {
-    height: 89px;
+    height: 60px;
   }
   .footer {
     font-size: 0.7rem;
@@ -453,19 +492,37 @@
     &__top {
       font-size: 0.4rem;
     }
+
+    &__left {
+      margin-bottom: 0.4rem;
+    }
+
     &__inner {
       padding: 10px;
       @include flexAround(space-between, center, column, 5);
     }
+    &__right {
+      @include flexAround(center, center, row, 7);
+    }
+
+    &__greeting {
+      font-size: 0.5rem;
+    }
+
+    &__welcometxt {
+      font-size: 0.5rem;
+      margin-right: 0.2rem;
+    }
+
     &__search-cart {
       @include flexAround(center, center, row, 10);
     }
 
     &__input {
       font-size: 0.5rem;
-      width: 9rem;
-      height: 1rem;
-      padding: 0.6rem;
+      width: 10rem;
+      height: 0.5rem;
+      padding: 0.4rem;
     }
 
     &__inner {
@@ -482,7 +539,7 @@
   }
 
   .dummy {
-    height: 86px;
+    height: 70px;
   }
   .footer {
     font-size: 0.7rem;
