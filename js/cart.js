@@ -1,5 +1,9 @@
 const cartContainer = document.querySelector('#itemsincart');
-const summaryContainer = document.querySelector('#summary');
+const summarySubTotal = document.querySelector('#summaryContainer');
+const shipping = document.querySelector('#summaryShipping');
+const VAT = document.querySelector('#summaryVat');
+const totals = document.querySelector('#summaryTotal');
+const coupDiscount = document.querySelector('#discount');
 
 let cart;
 
@@ -80,15 +84,59 @@ function changeQuantity(operation, id) {
   updateCartPage();
 }
 
-function renderSubtotal() {
-  let subtotal = 0;
+let coupounDiscount;
+function addCoupoun() {
+  let enteredCoupoun = document.getElementById('coupoun').value;
+  console.log(enteredCoupoun);
 
+  const coupoun = {
+    AJAKO100: 100,
+    CHRISTMAS500: 500,
+  };
+  const objCoupoun = Object.keys(coupoun);
+  console.log(objCoupoun);
+  if (enteredCoupoun === objCoupoun[0]) {
+    console.log(' discount 100');
+    coupounDiscount = 100;
+  } else if (enteredCoupoun === objCoupoun[1]) {
+    coupounDiscount = 500;
+  }
+
+  coupDiscount.textContent = `- Rs. ${coupounDiscount}`;
+  updateCartPage();
+}
+
+// // for shipping charge
+// function getRandomShippingCharge(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+function renderSubtotal() {
+  let vat = 0;
+  let subtotal = 0;
+  let shippingCharge = 120;
+  let total;
+
+  // error in vat need to fix
   cart.forEach((item) => {
     let price = item.price - (item.price * item.discountPercent) / 100;
     subtotal += price * item.numberOfUnits;
+    summarySubTotal.textContent = `Rs. ${subtotal.toFixed(2)}`;
   });
 
-  console.log(subtotal);
+  shipping.textContent = shippingCharge;
+
+  vat = (subtotal * 13) / 100;
+  VAT.textContent = `Rs. ${vat.toFixed(2)}`;
+
+  // for total
+  if (coupounDiscount) {
+    total = subtotal + shippingCharge + vat - coupounDiscount;
+    totals.textContent = `Rs. ${total.toFixed(2)}`;
+  } else {
+    total = subtotal + shippingCharge + vat;
+    totals.textContent = `Rs. ${total.toFixed(2)}`;
+  }
 }
 renderSubtotal();
 

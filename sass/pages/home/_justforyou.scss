@@ -42,3 +42,21 @@
     }
   }
 }
+
+@media (max-width: 376px) {
+  .justforyou {
+    &__cards {
+      @include flexAround(flex-start, center, row, 30);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .justforyou {
+    &__cards {
+      @include flexAround(flex-start, center, row, 26);
+      flex-wrap: wrap;
+    }
+  }
+}

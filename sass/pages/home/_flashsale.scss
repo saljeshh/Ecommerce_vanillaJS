@@ -111,14 +111,35 @@
   }
 }
 
+@media (max-width: 376px) {
+  .flash-sale {
+    &__cards {
+      @include flexAround(flex-start, center, row, 30);
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      font-size: 0.7rem;
+    }
+
+    &__time {
+      font-size: 0.7rem;
+    }
+  }
+}
+
 @media (max-width: 320px) {
   .flash-sale {
     &__header {
       padding: 0.5rem 0.7rem;
     }
 
+    &__contains {
+      padding: 0rem;
+    }
+
     &__cards {
-      @include flexAround(flex-start, center, row, 10);
+      @include flexAround(flex-start, center, row, 26);
       flex-wrap: wrap;
     }
 

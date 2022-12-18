@@ -65,7 +65,7 @@ a {
   background: #ff5c00;
 }
 .btn--seemore {
-  background-color: #e7e7e7;
+  background-color: #ffffff;
   color: #000000;
   border: 1px solid #ff5c00;
   padding: 0.4rem 1rem;
@@ -187,6 +187,10 @@ a {
   .btn--feedback {
     padding: 0.1rem 0.4rem;
   }
+  .btn--seemore {
+    padding: 0.3rem 0.3rem;
+    font-size: 0.5rem;
+  }
   .card {
     font-size: 0.6rem;
     width: 7.5rem;
@@ -205,6 +209,35 @@ a {
     letter-spacing: 0.2rem;
   }
 }
+@media (max-width: 376px) {
+  .container {
+    width: 350px;
+  }
+  .btn--search {
+    padding: 0.3rem 0.3rem;
+    font-size: 0.5rem;
+  }
+  .btn--feedback {
+    padding: 0.1rem 0.4rem;
+  }
+  .btn--seemore {
+    padding: 0.3rem 0.3rem;
+    font-size: 0.5rem;
+  }
+  .card {
+    font-size: 0.6rem;
+    width: 9.5rem;
+    height: 15rem;
+  }
+  .card__image {
+    margin-bottom: 0.6rem;
+    height: 10rem;
+  }
+  .card__image img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media (max-width: 320px) {
   .container {
     width: 300px;
@@ -215,6 +248,10 @@ a {
   }
   .btn--feedback {
     padding: 0.1rem 0.4rem;
+  }
+  .btn--seemore {
+    padding: 0.3rem 0.3rem;
+    font-size: 0.5rem;
   }
   .card {
     font-size: 0.6rem;
@@ -241,12 +278,36 @@ a {
   padding: 0.2rem;
   font-size: 0.8rem;
 }
+.header__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 80px;
+}
 .header__items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 30px;
+}
+.header__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.header__greeting {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff5c00;
+}
+.header__welcometxt {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  font-weight: bold;
 }
 .header a {
   color: #000000;
@@ -466,6 +527,35 @@ a {
 @media (max-width: 430px) {
   .header__top {
     font-size: 0.5rem;
+    padding: 0.3rem;
+  }
+  .header__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 70px;
+  }
+  .header__greeting {
+    font-size: 0.4rem;
+  }
+  .header__welcometxt {
+    font-size: 0.4rem;
+    margin-right: 0.2rem;
+  }
+  .header__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .header__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
   }
   .header__search-cart {
     display: flex;
@@ -524,6 +614,82 @@ a {
     margin-bottom: 0.2rem;
   }
 }
+@media (max-width: 376px) {
+  .header__top {
+    font-size: 0.56rem;
+  }
+  .header__inner {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .header__search-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .header__input {
+    font-size: 0.5rem;
+    width: 9rem;
+    height: 1rem;
+    padding: 0.6rem;
+  }
+  .header__inner {
+    padding: 5px;
+  }
+  .header__img {
+    height: 0.7rem;
+  }
+  .header__img--cart {
+    height: 0.9rem;
+  }
+  .dummy {
+    height: 89px;
+  }
+  .footer {
+    font-size: 0.7rem;
+  }
+  .footer__contains {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__map {
+    height: 4rem;
+    width: 4rem;
+  }
+  .footer__item {
+    font-size: 0.5rem;
+  }
+  .footer__location {
+    width: 12rem;
+  }
+  .footer__welcome {
+    font-size: 0.6rem;
+    margin-bottom: 0.6rem;
+    margin-right: 1rem;
+  }
+  .footer__images-payment > img {
+    height: 1.5rem;
+  }
+  .footer__textarea {
+    padding: 0.2rem;
+    font-size: 0.6rem;
+  }
+  .footer h1 {
+    margin-bottom: 0.7rem;
+  }
+  .footer__items {
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+  }
+}
 @media (max-width: 320px) {
   .header__top {
     font-size: 0.4rem;
@@ -559,7 +725,7 @@ a {
     height: 0.9rem;
   }
   .dummy {
-    height: 90px;
+    height: 86px;
   }
   .footer {
     font-size: 0.7rem;
@@ -692,7 +858,7 @@ a {
     width: 0.9rem;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 376px) {
   .filterbar__bars {
     display: flex;
     justify-content: center;
@@ -701,7 +867,7 @@ a {
     gap: 8px;
   }
   .filterbar__bar {
-    width: 5.5rem;
+    width: 4.5rem;
     height: 1.5rem;
     font-size: 0.5rem;
     padding: 0.2rem 0.2rem;
@@ -712,6 +878,28 @@ a {
   .filterbar__img {
     height: 0.9rem;
     width: 0.9rem;
+  }
+}
+@media (max-width: 320px) {
+  .filterbar__bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .filterbar__bar {
+    width: 4.4rem;
+    height: 1.5rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.2rem;
+  }
+  .filterbar__bar a {
+    margin-left: 0.2rem;
+  }
+  .filterbar__img {
+    height: 0.7rem;
+    width: 0.7rem;
   }
 }
 .flash-sale {
@@ -834,16 +1022,35 @@ a {
     padding: 0.1rem 0.2rem;
   }
 }
+@media (max-width: 376px) {
+  .flash-sale__cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .flash-sale__title {
+    font-size: 0.7rem;
+  }
+  .flash-sale__time {
+    font-size: 0.7rem;
+  }
+}
 @media (max-width: 320px) {
   .flash-sale__header {
     padding: 0.5rem 0.7rem;
+  }
+  .flash-sale__contains {
+    padding: 0rem;
   }
   .flash-sale__cards {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 26px;
     flex-wrap: wrap;
   }
   .flash-sale__title {
@@ -895,6 +1102,26 @@ a {
     align-items: center;
     flex-direction: row;
     gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 376px) {
+  .justforyou__cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 321px) {
+  .justforyou__cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 26px;
     flex-wrap: wrap;
   }
 }
@@ -1165,8 +1392,11 @@ a {
   }
 }
 @media (max-width: 320px) {
+  .productdetail {
+    padding: 1rem 0.5rem;
+  }
   .productdetail__contains {
-    padding: 3rem 3rem;
+    padding: 2rem 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1190,7 +1420,8 @@ a {
     opacity: 0.5;
   }
   .productdetail__description {
-    padding: 1rem;
+    width: 18rem;
+    padding: 0.8rem;
   }
   .productdetail__dis {
     font-size: 0.9rem;
@@ -1383,6 +1614,44 @@ a {
     opacity: 0.7;
   }
 }
+@media (max-width: 376px) {
+  .cart__itemsincart {
+    font-size: 0.6rem;
+    width: 100%;
+    padding: 1rem 0.2rem;
+    min-height: 20rem;
+  }
+  .cart__row {
+    font-size: 0.5rem;
+    padding: 0.4rem 0.4rem;
+  }
+  .cart__rowheader {
+    padding: 0.5rem 0.2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .cart__btns {
+    width: 1rem;
+    height: 1rem;
+  }
+  .cart__summary {
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+  }
+  .cart__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    font-size: 0.6rem;
+  }
+}
 @media (max-width: 320px) {
   .cart__contains {
     padding: 0.1rem 0.1rem;
@@ -1398,6 +1667,9 @@ a {
     padding: 1rem 0.2rem;
     min-height: 20rem;
   }
+  .cart__image {
+    width: 1rem;
+  }
   .cart__rowheader {
     padding: 0.5rem 0.2rem;
     display: flex;
@@ -1405,6 +1677,11 @@ a {
     align-items: center;
     flex-direction: row;
     gap: 10px;
+  }
+  .cart__summary {
+    width: 90%;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
   }
   .cart__block {
     display: flex;

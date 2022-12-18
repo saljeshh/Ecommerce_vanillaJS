@@ -21,10 +21,6 @@
               <a href="../pages/language.html" class="header_item">Language</a>
             </li>
             <li><a href="../pages/FAQ.html" class="header_item">FAQ</a></li>
-            <li><a href="../pages/login.html" class="header_item">Login</a></li>
-            <li>
-              <a href="../pages/register.html" class="header_item">Register</a>
-            </li>
             <li>
               <a href="../pages/trackOrder.html" class="header_item"
                 >Track Order</a
@@ -36,7 +32,7 @@
       <div class="header__bottom">
         <div class="header__inner container">
           <div class="header__logo">
-            <a href=".././index.html">
+            <a href="../index.html">
               <img class="header__img" src="../img/logo.png" alt="logo" />
             </a>
           </div>
@@ -50,7 +46,7 @@
               <button class="btn btn--search">Search</button>
             </div>
             <div class="header__cart">
-              <a href="./cart.html">
+              <a href="../pages/cart.html">
                 <img
                   class="header__img--cart"
                   src="../img/cart.png"
@@ -59,9 +55,20 @@
               </a>
             </div>
           </div>
-          <div class="header__right">
-            <img class="header__img" src="../img/discount.png" alt="logo" />
-          </div>
+          <ul class="header__right" id="headerAuth">
+            <li>
+              <a href="../pages/login.html" class="btn btn--seemore header_item"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/register.html"
+                class="btn btn--search header_item"
+                >Register</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -149,5 +156,7 @@
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
+
+    <script src="../js/header.js"></script>
   </body>
 </html>

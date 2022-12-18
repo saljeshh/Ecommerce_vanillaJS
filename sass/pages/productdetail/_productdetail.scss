@@ -127,8 +127,9 @@
 
 @media (max-width: 320px) {
   .productdetail {
+    padding: 1rem 0.5rem;
     &__contains {
-      padding: 3rem 3rem;
+      padding: 2rem 2rem;
       @include flexAround(space-around, center, column, 40);
     }
 
@@ -154,7 +155,8 @@
     }
 
     &__description {
-      padding: 1rem;
+      width: 18rem;
+      padding: 0.8rem;
     }
 
     &__dis {

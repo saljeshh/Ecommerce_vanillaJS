@@ -15,19 +15,24 @@
             <li><a href="./pages/customerService.html" class="header_item">Customer Service</a></li>
             <li><a href="./pages/language.html" class="header_item">Language</a></li>
             <li><a href="./pages/FAQ.html" class="header_item">FAQ</a></li>
-            <li><a href="./pages/login.html" class="header_item">Login</a></li>
-            <li><a href="./pages/register.html" class="header_item">Register</a></li>
             <li><a href="./pages/trackOrder.html" class="header_item">Track Order</a></li>
           </ul>
         </div>
       </div>
       <div class="header__bottom">
         <div class="header__inner container">
-          <div class="header__logo">
-            <a href="./index.html">
-              <img class="header__img" src="./img/logo.png" alt="logo" />
-            </a>
+          <div class="header__left">
+            <div class="header__logo">
+              <a href="./index.html">
+                <img class="header__img" src="./img/logo.png" alt="logo" />
+              </a>
+            </div>
+            <ul class="header__right" id="headerAuth">
+              <li><a href="./pages/login.html" class=" btn btn--seemore">Login</a></li>
+            <li><a href="./pages/register.html" class=" btn btn--search">Register</a></li>
+            </ul>
           </div>
+
           <div class="header__search-cart">
             <div class="header__serachbar">
               <input
@@ -46,9 +51,6 @@
                 />
               </a>
             </div>
-          </div>
-          <div class="header__right">
-            <img class="header__img" src="./img/discount.png" alt="logo" />
           </div>
         </div>
       </div>
@@ -180,5 +182,6 @@
 
     <!-- js -->
     <script src="./js/home.js"></script>
+    <script src="./js/header.js"></script>
   </body>
 </html>

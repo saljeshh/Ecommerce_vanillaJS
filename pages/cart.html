@@ -21,10 +21,6 @@
               <a href="../pages/language.html" class="header_item">Language</a>
             </li>
             <li><a href="../pages/FAQ.html" class="header_item">FAQ</a></li>
-            <li><a href="../pages/login.html" class="header_item">Login</a></li>
-            <li>
-              <a href="../pages/register.html" class="header_item">Register</a>
-            </li>
             <li>
               <a href="../pages/trackOrder.html" class="header_item"
                 >Track Order</a
@@ -36,7 +32,7 @@
       <div class="header__bottom">
         <div class="header__inner container">
           <div class="header__logo">
-            <a href=".././index.html">
+            <a href="../index.html">
               <img class="header__img" src="../img/logo.png" alt="logo" />
             </a>
           </div>
@@ -50,7 +46,7 @@
               <button class="btn btn--search">Search</button>
             </div>
             <div class="header__cart">
-              <a href="./cart.html">
+              <a href="../pages/cart.html">
                 <img
                   class="header__img--cart"
                   src="../img/cart.png"
@@ -59,9 +55,20 @@
               </a>
             </div>
           </div>
-          <div class="header__right">
-            <img class="header__img" src="../img/discount.png" alt="logo" />
-          </div>
+          <ul class="header__right" id="headerAuth">
+            <li>
+              <a href="../pages/login.html" class="btn btn--seemore header_item"
+                >Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/register.html"
+                class="btn btn--search header_item"
+                >Register</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -87,29 +94,39 @@
           <div class="cart__contain">
             <div class="cart__block">
               <div class="cart__label">Subtotal</div>
-              <p class="cart__price">Rs. 590</p>
+              <p class="cart__price" id="summaryContainer">Rs. 0</p>
             </div>
             <div class="cart__block">
               <div class="cart__label">Shipping</div>
-              <p class="cart__price">Rs. 90</p>
+              <p class="cart__price" id="summaryShipping">Rs. 0</p>
             </div>
             <div class="cart__block">
               <div class="cart__label">VAT</div>
-              <p class="cart__price">Rs. 59</p>
+              <p class="cart__price" id="summaryVat"></p>
             </div>
 
             <div class="cart__block">
               <input
+                id="coupoun"
                 type="text"
                 placeholder="Enter Coupoun"
                 class="cart__coupoun"
               />
-              <button class="btn btn--small">ADD</button>
+              <button
+                class="btn btn--small"
+                type="submit"
+                onclick="addCoupoun()"
+              >
+                ADD
+              </button>
             </div>
-
+            <div class="cart__block">
+              <div class="cart__label">Coupoun Discount</div>
+              <p id="discount">- Rs. 0</p>
+            </div>
             <div class="cart__block">
               <div class="cart__label">Total</div>
-              <p class="cart__price">Rs. 890</p>
+              <p class="cart__price" id="summaryTotal"></p>
             </div>
           </div>
           <a href="./checkout.html" class="btn btn--seemore">Checkout</a>
@@ -199,5 +216,5 @@
     </footer>
   </body>
   <script src="../js/cart.js"></script>
-  i
+  <script src="../js/header.js"></script>
 </html>

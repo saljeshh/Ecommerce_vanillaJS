@@ -79,14 +79,14 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
   .filterbar {
     &__bars {
       @include flexAround(center, center, row, 8);
     }
 
     &__bar {
-      width: 5.5rem;
+      width: 4.5rem;
       height: 1.5rem;
       font-size: 0.5rem;
       padding: 0.2rem 0.2rem;
@@ -99,6 +99,30 @@
     &__img {
       height: 0.9rem;
       width: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .filterbar {
+    &__bars {
+      @include flexAround(center, center, row, 8);
+    }
+
+    &__bar {
+      width: 4.4rem;
+      height: 1.5rem;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.2rem;
+
+      a {
+        margin-left: 0.2rem;
+      }
+    }
+
+    &__img {
+      height: 0.7rem;
+      width: 0.7rem;
     }
   }
 }

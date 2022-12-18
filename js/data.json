@@ -59,7 +59,11 @@
     "writer": "Norman Vincent Peale",
     "stock": 7,
     "image": "img/powerofpositive.png",
-    "images": ["img/powerofpo.png", "img/powerofpo.png", "img/powerofpo.png"],
+    "images": [
+      "img/powerofpositive.png",
+      "img/powerofpositive.png",
+      "img/powerofpositive.png"
+    ],
     "flashSale": false,
     "category": "Self Help"
   },

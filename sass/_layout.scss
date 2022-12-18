@@ -11,8 +11,27 @@
     // box-shadow: 0px 15px 5px $color-background-black;
   }
 
+  &__left {
+    @include flexAround(center, center, row, 80);
+  }
+
   &__items {
     @include flexAround(center, center, row, 30);
+  }
+
+  &__right {
+    @include flexAround(center, center, row, 20);
+  }
+
+  &__greeting {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: $color-primary;
+  }
+  &__welcometxt {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
   }
 
   a {
@@ -257,7 +276,30 @@
   .header {
     &__top {
       font-size: 0.5rem;
+      padding: 0.3rem;
     }
+
+    &__left {
+      @include flexAround(center, center, row, 70);
+    }
+
+    &__greeting {
+      font-size: 0.4rem;
+    }
+
+    &__welcometxt {
+      font-size: 0.4rem;
+      margin-right: 0.2rem;
+    }
+
+    &__right {
+      @include flexAround(center, center, row, 5);
+    }
+
+    &__items {
+      @include flexAround(center, center, row, 10);
+    }
+
     &__search-cart {
       @include flexAround(center, center, row, 10);
     }
@@ -326,6 +368,86 @@
   }
 }
 
+@media (max-width: 376px) {
+  .header {
+    &__top {
+      font-size: 0.56rem;
+    }
+    &__inner {
+      padding: 10px;
+      @include flexAround(space-between, center, column, 5);
+    }
+    &__search-cart {
+      @include flexAround(center, center, row, 10);
+    }
+
+    &__input {
+      font-size: 0.5rem;
+      width: 9rem;
+      height: 1rem;
+      padding: 0.6rem;
+    }
+
+    &__inner {
+      padding: 5px;
+    }
+
+    &__img {
+      height: 0.7rem;
+
+      &--cart {
+        height: 0.9rem;
+      }
+    }
+  }
+
+  .dummy {
+    height: 89px;
+  }
+  .footer {
+    font-size: 0.7rem;
+    &__contains {
+      @include flexAround(space-between, null, column, 10);
+    }
+    &__map {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    &__item {
+      font-size: 0.5rem;
+    }
+
+    &__location {
+      width: 12rem;
+    }
+
+    &__welcome {
+      font-size: 0.6rem;
+      margin-bottom: 0.6rem;
+      margin-right: 1rem;
+    }
+
+    &__images-payment > img {
+      height: 1.5rem;
+    }
+
+    &__textarea {
+      padding: 0.2rem;
+      font-size: 0.6rem;
+    }
+
+    h1 {
+      margin-bottom: 0.7rem;
+    }
+
+    &__items {
+      font-size: 1.2rem;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
 @media (max-width: 320px) {
   .header {
     &__top {
@@ -360,7 +482,7 @@
   }
 
   .dummy {
-    height: 90px;
+    height: 86px;
   }
   .footer {
     font-size: 0.7rem;
