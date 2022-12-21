@@ -1,4 +1,6 @@
 const headerAuthSection = document.querySelector('#headerAuth');
+const searchValue = document.querySelector('#searchValue');
+const searchBtn = document.querySelector('#searchbtn');
 // const userEmail = new URL(document.location).searchParams.get('email');
 const userEmail = JSON.parse(localStorage.getItem('requestedLoginUser')).email;
 console.log(userEmail);
@@ -27,4 +29,15 @@ window.onload = () => {
             `;
     });
   }
+
+  let searchdata;
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchdata = searchValue.value;
+    console.log(searchdata);
+
+    localStorage.setItem('searchKEY', JSON.stringify(searchdata));
+
+    window.location.replace('http://127.0.0.1:5500/pages/search.html');
+  });
 };

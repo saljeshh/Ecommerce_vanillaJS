@@ -49,7 +49,7 @@
 
   // for cards area
   &__cards {
-    @include flexAround(space-between, center, row, 20);
+    @include flexAround(flex-start, center, row, 20);
     flex-wrap: wrap;
   }
 }

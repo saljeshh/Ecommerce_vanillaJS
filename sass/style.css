@@ -1059,7 +1059,7 @@ a {
 }
 .flash-sale__cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   gap: 20px;
@@ -1970,6 +1970,28 @@ a {
   align-items: center;
   background-color: white;
   margin-bottom: 2rem;
+}
+
+.search {
+  min-height: 20rem;
+  padding: 2rem 2rem;
+}
+.search__title {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.search__result {
+  background-color: #ffffff;
+  padding: 2rem 0.5rem;
+  min-height: 20rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.search__searchfor {
+  font-weight: normal;
+  margin-left: 0.2rem;
+  font-style: italic;
 }
 
 .checkout {

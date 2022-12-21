@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ship up</title>
     <link rel="stylesheet" href="../sass/style.css" />
+    <title>Login</title>
   </head>
   <body>
     <header class="header">
@@ -75,41 +75,20 @@
 
     <div class="dummy"></div>
 
-    <section class="banner">
-      <img class="banner__img" src="../img/filterbooks.svg" alt="banner" />
-    </section>
-
-    <section class="filterbar" id="filterbar">
-      <ul class="filterbar__bars">
-        <li class="filterbar__bar" data-category="selfhelp">
-          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
-          <span>Self Help</span>
-        </li>
-        <li class="filterbar__bar" data-category="history">
-          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
-          <span>History</span>
-        </li>
-        <li class="filterbar__bar" data-category="investing">
-          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
-          <span>Investing</span>
-        </li>
-        <li class="filterbar__bar" data-category="selfimprovement">
-          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
-          <span>Improvement</span>
-        </li>
-      </ul>
-    </section>
-
-    <section class="filter-cards container">
-      <h1>Filtered Products</h1>
-      <div class="filter-cards__cards" id="filterpage">
-        <!-- dynamic data -->
-        <div class="nodata">
-          <h2>Please Click Filter Buttons!</h2>
-          <img src="../img/cart.png" alt="" />
+    <div class="search container">
+      <div class="search__title">
+        search result for <span class="search__searchfor" id="searchfor"></span>
+      </div>
+      <div class="search__result">
+        <div class="flash-sale__cards" id="search">
+          <!-- dynamic data -->
+          <div class="nodata">
+            <h2>Opps!! No Results Found</h2>
+            <img src="../img/cart.png" alt="" />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <footer class="footer">
       <div class="footer__newsletter">
@@ -130,22 +109,20 @@
           <h1>Quick Links</h1>
           <ul class="footer__items">
             <li>
-              <a href="../pages/customerService.html" class="footer__item"
+              <a href="./pages/customerService.html" class="footer__item"
                 >Customer Service</a
               >
             </li>
             <li>
-              <a href="../pages/language.html" class="footer__item">Language</a>
+              <a href="./pages/language.html" class="footer__item">Language</a>
             </li>
-            <li><a href="../pages/FAQ.html" class="footer__item">FAQ</a></li>
+            <li><a href="./pages/FAQ.html" class="footer__item">FAQ</a></li>
+            <li><a href="./pages/login.html" class="footer__item">Login</a></li>
             <li>
-              <a href="../pages/login.html" class="footer__item">Login</a>
-            </li>
-            <li>
-              <a href="../pages/register.html" class="footer__item">Register</a>
+              <a href="./pages/register.html" class="footer__item">Register</a>
             </li>
             <li>
-              <a href="../pages/trackOrder.html" class="footer__item"
+              <a href="./pages/trackOrder.html" class="footer__item"
                 >Track Order</a
               >
             </li>
@@ -193,9 +170,7 @@
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
-
-    <!-- js -->
-    <script src="../js/filter.js"></script>
-    <script src="../js/header.js"></script>
   </body>
+  <script src="../js/search.js"></script>
+  <script src="../js/header.js"></script>
 </html>
