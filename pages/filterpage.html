@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ship up</title>
     <link rel="stylesheet" href="../sass/style.css" />
-    <title>Login</title>
   </head>
   <body>
     <header class="header">
@@ -29,6 +29,7 @@
           </ul>
         </div>
       </div>
+
       <div class="header__bottom">
         <div class="header__inner container">
           <div class="header__left">
@@ -39,12 +40,14 @@
             </div>
             <ul class="header__right" id="headerAuth">
               <li>
-                <a href="../pages/login.html" class="btn btn--seemore">Login</a>
+                <a href="../pages/login.html" class="btn btn--seemore">
+                  Login
+                </a>
               </li>
               <li>
-                <a href="../pages/register.html" class="btn btn--search"
-                  >Register</a
-                >
+                <a href="../pages/register.html" class="btn btn--search">
+                  Register
+                </a>
               </li>
             </ul>
           </div>
@@ -74,51 +77,41 @@
 
     <div class="dummy"></div>
 
-    <div class="checkout container">
-      <div class="checkout__shipping">
-        <form action="" class="login__form">
-          <h1>Shipping Details</h1>
-          <div class="login__group">
-            <label for="email" class="login__label">Email</label>
-            <input
-              id="email"
-              type="email"
-              class="login__input"
-              placeholder="Enter email here"
-              required
-            />
-          </div>
-          <div class="login__group">
-            <label for="phone" class="login__label">Phone no.</label>
-            <input
-              id="phone"
-              type="number"
-              class="login__input"
-              placeholder="Enter your Phone no."
-              required
-            />
-          </div>
-          <div class="login__group">
-            <label for="address" class="login__label">Shipping Address</label>
-            <input
-              id="address"
-              type="text"
-              class="login__input"
-              placeholder="Enter your Full Address"
-              required
-            />
-          </div>
-        </form>
-      </div>
-      <div class="checkout__payment">
-        <div class="checkout__summary">
-          <h1>Summary of Products</h1>
-          <div class="checkout__total">Rs. 14400</div>
-        </div>
+    <section class="banner">
+      <img class="banner__img" src="../img/filterbooks.svg" alt="banner" />
+    </section>
 
-        <div id="paypal-button-container"></div>
+    <section class="filterbar" id="filterbar">
+      <ul class="filterbar__bars">
+        <li class="filterbar__bar" data-category="selfhelp">
+          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
+          <span>Self Help</span>
+        </li>
+        <li class="filterbar__bar" data-category="history">
+          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
+          <span>History</span>
+        </li>
+        <li class="filterbar__bar" data-category="investing">
+          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
+          <span>Investing</span>
+        </li>
+        <li class="filterbar__bar" data-category="selfimprovement">
+          <img class="filterbar__img" src="../img/psm.jpg" alt="book name" />
+          <span>Improvement</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="filter-cards container">
+      <h1>Filtered Products</h1>
+      <div class="filter-cards__cards" id="filterpage">
+        <!-- dynamic data -->
+        <div class="nodata">
+          <h2>Please Click Filter Buttons!</h2>
+          <img src="../img/cart.png" alt="" />
+        </div>
       </div>
-    </div>
+    </section>
 
     <footer class="footer">
       <div class="footer__newsletter">
@@ -139,20 +132,22 @@
           <h1>Quick Links</h1>
           <ul class="footer__items">
             <li>
-              <a href="./pages/customerService.html" class="footer__item"
+              <a href="../pages/customerService.html" class="footer__item"
                 >Customer Service</a
               >
             </li>
             <li>
-              <a href="./pages/language.html" class="footer__item">Language</a>
+              <a href="../pages/language.html" class="footer__item">Language</a>
             </li>
-            <li><a href="./pages/FAQ.html" class="footer__item">FAQ</a></li>
-            <li><a href="./pages/login.html" class="footer__item">Login</a></li>
+            <li><a href="../pages/FAQ.html" class="footer__item">FAQ</a></li>
             <li>
-              <a href="./pages/register.html" class="footer__item">Register</a>
+              <a href="../pages/login.html" class="footer__item">Login</a>
             </li>
             <li>
-              <a href="./pages/trackOrder.html" class="footer__item"
+              <a href="../pages/register.html" class="footer__item">Register</a>
+            </li>
+            <li>
+              <a href="../pages/trackOrder.html" class="footer__item"
                 >Track Order</a
               >
             </li>
@@ -200,13 +195,9 @@
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
-  </body>
 
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=AdR6Laok3Vo0Gb1dEq1LGgx2cxQCYt3dC6rQ8EJt3xLBW1466carnJGHVDM-xZ3uh_i5b3n_cAmnVQEK&currency=USD&intent=capture"
-    data-sdk-integration-source="integrationbuilder"
-  ></script>
-  <script src="../js/payment.js"></script>
-  <script src="../js/cart.js"></script>
-  <script src="../js/header.js"></script>
+    <!-- js -->
+    <script src="../js/filter.js"></script>
+    <script src="../js/header.js"></script>
+  </body>
 </html>

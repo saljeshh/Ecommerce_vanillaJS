@@ -74,49 +74,38 @@
 
     <div class="dummy"></div>
 
-    <div class="checkout container">
-      <div class="checkout__shipping">
-        <form action="" class="login__form">
-          <h1>Shipping Details</h1>
-          <div class="login__group">
-            <label for="email" class="login__label">Email</label>
-            <input
-              id="email"
-              type="email"
-              class="login__input"
-              placeholder="Enter email here"
-              required
-            />
-          </div>
-          <div class="login__group">
-            <label for="phone" class="login__label">Phone no.</label>
-            <input
-              id="phone"
-              type="number"
-              class="login__input"
-              placeholder="Enter your Phone no."
-              required
-            />
-          </div>
-          <div class="login__group">
-            <label for="address" class="login__label">Shipping Address</label>
-            <input
-              id="address"
-              type="text"
-              class="login__input"
-              placeholder="Enter your Full Address"
-              required
-            />
-          </div>
-        </form>
+    <div class="salebanner container">
+      <div class="salebanner__bannerimg">
+        <img
+          class="salebanner__image"
+          src="../img/flashsalebanner.svg"
+          alt=""
+        />
       </div>
-      <div class="checkout__payment">
-        <div class="checkout__summary">
-          <h1>Summary of Products</h1>
-          <div class="checkout__total">Rs. 14400</div>
-        </div>
+    </div>
 
-        <div id="paypal-button-container"></div>
+    <div class="fsale container">
+      <div class="flash-sale__header">
+        <div class="flash-sale__left">
+          <p class="flash-sale__title flash-sale__title--sale">On Sale Now</p>
+          <div class="flash-sale__ending-timer">
+            <p class="flash-sale__title">Ending in</p>
+            <div class="flash-sale__times">
+              <p class="flash-sale__time">05</p>
+              <p class="flash-sale__time-colon">:</p>
+              <p class="flash-sale__time">56</p>
+              <p class="flash-sale__time-colon">:</p>
+              <p class="flash-sale__time">36</p>
+            </div>
+          </div>
+        </div>
+        <div class="flash-sale__right">
+          <a href="../index.html" class="btn btn--search">Goto Home Page</a>
+        </div>
+      </div>
+
+      <div class="flash-sale__cards" id="flashSalePage">
+        <!-- dynamic data -->
       </div>
     </div>
 
@@ -201,12 +190,6 @@
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
   </body>
-
-  <script
-    src="https://www.paypal.com/sdk/js?client-id=AdR6Laok3Vo0Gb1dEq1LGgx2cxQCYt3dC6rQ8EJt3xLBW1466carnJGHVDM-xZ3uh_i5b3n_cAmnVQEK&currency=USD&intent=capture"
-    data-sdk-integration-source="integrationbuilder"
-  ></script>
-  <script src="../js/payment.js"></script>
-  <script src="../js/cart.js"></script>
+  <script src="../js/flashSalePage.js"></script>
   <script src="../js/header.js"></script>
 </html>

@@ -240,7 +240,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .header {
     &__top {
       font-size: 0.6rem;
@@ -315,7 +315,7 @@
     }
 
     &__left {
-      @include flexAround(center, center, row, 70);
+      @include flexAround(center, center, row, 170);
     }
 
     &__greeting {
@@ -403,7 +403,7 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 390px) {
   .header {
     &__top {
       font-size: 0.4rem;
@@ -412,12 +412,24 @@
       padding: 10px;
       @include flexAround(space-between, center, column, 5);
     }
+    &__left {
+      @include flexAround(center, center, row, 80);
+    }
     &__search-cart {
       @include flexAround(center, center, row, 10);
     }
 
     &__right {
       @include flexAround(center, center, row, 7);
+    }
+
+    &__greeting {
+      font-size: 0.5rem;
+    }
+
+    &__welcometxt {
+      font-size: 0.5rem;
+      margin-right: 0.2rem;
     }
 
     &__input {
@@ -494,6 +506,7 @@
     }
 
     &__left {
+      @include flexAround(center, center, row, 80);
       margin-bottom: 0.4rem;
     }
 

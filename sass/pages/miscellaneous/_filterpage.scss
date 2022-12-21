@@ -1,0 +1,23 @@
+.filter-cards {
+  margin-top: 2rem;
+  &__cards {
+    margin-top: 2rem;
+    @include flexAround(center, center, row, 20);
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}
+
+.nodata {
+  width: 100%;
+  display: flex;
+  opacity: 0.5;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 2rem;
+}

@@ -12,7 +12,7 @@
     "image": "img/richdad.jpg",
     "images": ["img/richdad.jpg", "img/richdad.jpg", "img/richdad.jpg"],
     "flashSale": true,
-    "category": "Investment"
+    "category": "investing"
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@
       "img/intelligent.png"
     ],
     "flashSale": false,
-    "category": "Investment"
+    "category": "investing"
   },
   {
     "id": 3,
@@ -46,7 +46,7 @@
     "image": "img/psm.jpg",
     "images": ["img/psm.jpg", "img/psm.jpg", "img/psm.jpg"],
     "flashSale": false,
-    "category": "Self Help"
+    "category": "selfhelp"
   },
   {
     "id": 4,
@@ -65,7 +65,7 @@
       "img/powerofpositive.png"
     ],
     "flashSale": false,
-    "category": "Self Help"
+    "category": "selfhelp"
   },
   {
     "id": 5,
@@ -80,7 +80,7 @@
     "image": "img/bhagwat.jpg",
     "images": ["img/bhagwat.jpg", "img/bhagwat.jpg", "img/bhagwat.jpg"],
     "flashSale": true,
-    "category": "History"
+    "category": "history"
   },
   {
     "id": 6,
@@ -95,7 +95,7 @@
     "image": "img/rigveda.jpg",
     "images": ["img/rigveda.jpg", "img/rigveda.jpg", "img/rigveda.jpg"],
     "flashSale": false,
-    "category": "History"
+    "category": "history"
   },
   {
     "id": 7,
@@ -110,7 +110,7 @@
     "image": "img/quran.jpg",
     "images": ["img/quran.jpg", "img/quran.jpg", "img/quran.jpg"],
     "flashSale": false,
-    "category": "History"
+    "category": "history"
   },
   {
     "id": 8,
@@ -129,7 +129,7 @@
       "img/atomichabit.jpg"
     ],
     "flashSale": true,
-    "category": "Self Imporvement"
+    "category": "selfimprovement"
   },
   {
     "id": 9,
@@ -148,7 +148,7 @@
       "img/thinkandgrow.jpg"
     ],
     "flashSale": true,
-    "category": "Investment"
+    "category": "investing"
   },
   {
     "id": 10,
@@ -167,7 +167,7 @@
       "img/artofpublic.png"
     ],
     "flashSale": true,
-    "category": "Self Imporvement"
+    "category": "selfimprovement"
   },
   {
     "id": 11,
@@ -182,7 +182,7 @@
     "image": "img/woman.jpg",
     "images": ["img/woman.jpg", "img/woman.jpg", "img/woman.jpg"],
     "flashSale": false,
-    "category": "Self Imporvement"
+    "category": "selfimprovement"
   },
   {
     "id": 12,
@@ -197,6 +197,6 @@
     "image": "img/secret.jpg",
     "images": ["img/secret.jpg", "img/secret.jpg", "img/secret.jpg"],
     "flashSale": true,
-    "category": "Technology"
+    "category": "selfhelp"
   }
 ]

@@ -1,0 +1,45 @@
+.checkout {
+  background-color: $color-background-white;
+  padding: 2rem 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @include flexAround(space-between, center, row, 20);
+
+  &__payment {
+    background-color: $color-background-gray;
+    padding: 2rem 2rem;
+    @include flexAround(space-between, center, column, 100);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout {
+    background-color: $color-background-white;
+    padding: 2rem 5rem;
+    @include flexAround(space-between, center, row, 20);
+
+    &__payment {
+      background-color: $color-background-gray;
+      padding: 2rem 2rem;
+      @include flexAround(space-between, center, column, 100);
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .checkout {
+    @include flexAround(space-between, center, column, 20);
+  }
+}
+
+@media (max-width: 376px) {
+  .checkout {
+    @include flexAround(space-between, center, column, 20);
+  }
+}
+
+@media (max-width: 320px) {
+  .checkout {
+    @include flexAround(space-between, center, column, 20);
+  }
+}

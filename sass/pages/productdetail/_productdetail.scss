@@ -1,5 +1,5 @@
 .productdetail {
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
 
   &__contains {
     box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3);
@@ -66,6 +66,12 @@
     margin-bottom: 0.5rem;
   }
 
+  &__continue {
+    color: $color-primary;
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 1.2rem;
@@ -105,6 +111,7 @@
   &__buttons {
     margin-top: 1rem;
     font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   &__desc {
@@ -116,6 +123,42 @@
   }
 }
 
+.suggestedProducts {
+  background-color: $color-background-white;
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+
+  h1 {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &__products {
+    padding: 2rem 5rem;
+    @include flexAround(flex-start, center, row, 50);
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background-color: rgba($color-background-gray, 0.5);
+  }
+}
+
+@media (max-width: 780px) {
+  .suggestedProducts {
+    padding: 2rem 2rem;
+
+    h1 {
+      text-align: center;
+    }
+
+    &__products {
+      padding: 2rem 2rem;
+      @include flexAround(flex-start, center, row, 20);
+    }
+  }
+}
+
 @media (max-width: 430px) {
   .productdetail {
     &__contains {
@@ -123,9 +166,22 @@
       @include flexAround(space-around, center, column, 40);
     }
   }
+
+  .suggestedProducts {
+    padding: 2rem 2rem;
+
+    h1 {
+      text-align: center;
+    }
+
+    &__products {
+      padding: 2rem 2rem;
+      @include flexAround(flex-start, center, row, 30);
+    }
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 325px) {
   .productdetail {
     padding: 1rem 0.5rem;
     &__contains {
@@ -174,6 +230,34 @@
 
     &__specs {
       font-size: 0.6rem;
+    }
+  }
+
+  .suggestedProducts {
+    padding: 1rem 0.2rem;
+
+    h1 {
+      text-align: center;
+    }
+
+    &__products {
+      padding: 1rem 0.3rem;
+      @include flexAround(flex-start, center, row, 10);
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .suggestedProducts {
+    padding: 1rem 0.2rem;
+
+    h1 {
+      text-align: center;
+    }
+
+    &__products {
+      padding: 1rem 0.2rem;
+      @include flexAround(flex-start, center, row, 15);
     }
   }
 }

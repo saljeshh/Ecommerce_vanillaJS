@@ -5,6 +5,8 @@ const VAT = document.querySelector('#summaryVat');
 const totals = document.querySelector('#summaryTotal');
 const coupDiscount = document.querySelector('#discount');
 
+const checkoutbtn = document.querySelector('#checkoutbtn');
+
 let cart;
 
 if (JSON.parse(localStorage.getItem('cart-items'))) {
@@ -41,10 +43,10 @@ function renderCart() {
               })" >+</button>
             </div>
           </div>
-          <div class="cart__col">Rs. ${
+          <div class="cart__col">Rs. ${(
             (item.price - (item.price * item.discountPercent) / 100) *
             item.numberOfUnits
-          }</div>
+          ).toFixed(2)}</div>
           <div class="cart__col">
             <button class="btn btn--remove remove" onclick="removeItem(${
               item.id
@@ -132,10 +134,10 @@ function renderSubtotal() {
   // for total
   if (coupounDiscount) {
     total = subtotal + shippingCharge + vat - coupounDiscount;
-    totals.textContent = `Rs. ${total.toFixed(2)}`;
+    totals.textContent = `${total.toFixed(2)}`;
   } else {
     total = subtotal + shippingCharge + vat;
-    totals.textContent = `Rs. ${total.toFixed(2)}`;
+    totals.textContent = `${total.toFixed(2)}`;
   }
 }
 renderSubtotal();
@@ -144,3 +146,19 @@ function removeItem(id) {
   cart = cart.filter((item) => item.id !== id);
   updateCartPage();
 }
+
+checkoutbtn.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  let totalPay = Number(document.querySelector('#summaryTotal').textContent);
+  console.log(totalPay);
+  console.log(typeof totalPay);
+
+  const paymentTotal = {
+    totalAmount: totalPay,
+  };
+
+  localStorage.setItem('totalPay', JSON.stringify(paymentTotal));
+
+  window.location.replace('http://127.0.0.1:5500/pages/checkout.html');
+});

@@ -8,7 +8,7 @@ window.addEventListener('load', async () => {
   let flashData = '';
   let justforyouData = '';
 
-  res.forEach((item) => {
+  res.forEach((item, index) => {
     let ratingNum = '';
 
     for (let i = 1; i <= item.rating; i++) ratingNum += '⭐';

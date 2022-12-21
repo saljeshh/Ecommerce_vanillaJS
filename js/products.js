@@ -1,6 +1,7 @@
 const productDetailContainer = document.querySelector('#productdetail');
 const pid = new URL(document.location).searchParams.get('id');
 console.log(pid);
+let suggestionContainer = document.querySelector('#suggestedProducts');
 
 let jsondata = '';
 let cart = JSON.parse(localStorage.getItem('cart-items')) || [];
@@ -82,6 +83,7 @@ async function displayProduct() {
           product.id
         })">Add to Cart</a>
       </div>
+      <a href="../index.html" class="productdetail__continue">Continue Shopping ></a>
     </div>
 </div>
     `;
@@ -97,8 +99,72 @@ async function addToCart(id) {
     const item = jsondata.find((product) => product.id === id);
     // console.log(item);
     cart.push({ ...item, numberOfUnits: 1 });
+    alert('Added to Cart!!');
   }
 
   // push to localstorage
   localStorage.setItem('cart-items', JSON.stringify(cart));
 }
+
+let newdata = '';
+async function suggestedProduct() {
+  newdata = await getData();
+  let updateDom = '';
+
+  const ourCurrentProduct = newdata.find((item) => item.id === Number(pid));
+  // console.log(ourCurrentProduct);
+
+  const thisProductCategory = ourCurrentProduct['category'];
+
+  const filteredProducts = newdata.filter((product) => {
+    return product.category !== thisProductCategory;
+  });
+
+  for (let item = 0; item < filteredProducts.length; item++) {
+    let ratingNum = '';
+
+    for (let i = 1; i <= filteredProducts[item].rating; i++) ratingNum += '⭐';
+
+    if (item < 4) {
+      updateDom += `
+        <a class="card" href="../pages/productDetail.html?id=${
+          filteredProducts[item].id
+        }">
+          <div class="card__image">
+            <img src="../${filteredProducts[item].image}" alt="${
+        filteredProducts[item].title
+      }" />
+          </div>
+          <div class="card__description">
+            <div class="card__title">
+              <p>${filteredProducts[item].title}</p>
+            </div>
+            <div class="card__price">
+              <p class="card__discounted-price">Rs ${
+                filteredProducts[item].price -
+                (filteredProducts[item].price *
+                  filteredProducts[item].discountPercent) /
+                  100
+              }</p>
+              <p>
+                <span class="card__original-price">Rs. ${
+                  filteredProducts[item].price
+                }</span
+                ><span class="card__discountper">-${
+                  filteredProducts[item].discountPercent
+                }%</span>
+              </p>
+            </div>
+            <div class="card__rating">${ratingNum}</div>
+          </div>
+        </a>
+      `;
+      // console.log(item);
+    } else {
+      break;
+    }
+  }
+
+  suggestionContainer.innerHTML = updateDom;
+}
+suggestedProduct();

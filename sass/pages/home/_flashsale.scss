@@ -10,7 +10,6 @@
   //for contains or container of all
   &__contains {
     background-color: $color-background-gray;
-    padding: 0.5rem;
   }
 
   // for header
@@ -96,7 +95,7 @@
     }
 
     &__cards {
-      @include flexAround(flex-start, center, row, 10);
+      @include flexAround(flex-start, center, row, 15);
       flex-wrap: wrap;
     }
 
