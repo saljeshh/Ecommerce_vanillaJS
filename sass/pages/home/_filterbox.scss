@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .filterbar {
     &__bars {
       @include flexAround(center, center, row, 10);

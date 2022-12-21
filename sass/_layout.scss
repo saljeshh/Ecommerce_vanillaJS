@@ -302,29 +302,29 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .header {
     &__top {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
       padding: 0.3rem;
     }
 
     &__inner {
       padding: 10px;
-      @include flexAround(space-between, center, column, 5);
+      @include flexAround(space-between, center, column, 10);
     }
 
     &__left {
-      @include flexAround(center, center, row, 170);
+      @include flexAround(center, center, row, 130);
     }
 
     &__greeting {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
     }
 
     &__welcometxt {
-      font-size: 0.6rem;
-      margin-right: 0.2rem;
+      font-size: 0.7rem;
+      margin-right: 0.3rem;
     }
 
     &__right {
@@ -341,8 +341,8 @@
 
     &__input {
       font-size: 0.5rem;
-      width: 10rem;
-      height: 0.5rem;
+      width: 12rem;
+      height: 1.4rem;
       padding: 0.5rem;
     }
 
@@ -351,10 +351,10 @@
     }
 
     &__img {
-      height: 0.5rem;
+      height: 0.8rem;
 
       &--cart {
-        height: 0.8rem;
+        height: 1.3rem;
       }
     }
   }

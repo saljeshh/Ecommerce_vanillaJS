@@ -212,22 +212,22 @@ a {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .container {
     width: 400px;
   }
 
   .btn {
     &--search {
-      padding: 0.3rem 0.2rem;
-      font-size: 0.4rem;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.5rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
     }
     &--seemore {
       padding: 0.2rem 0.2rem;
-      font-size: 0.5rem;
+      font-size: 0.7rem;
     }
   }
 
