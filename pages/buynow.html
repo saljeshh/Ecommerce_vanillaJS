@@ -77,55 +77,61 @@
 
     <div class="dummy"></div>
 
-    <div class="checkout container">
-      <div class="checkout__shipping">
-        <form action="" class="login__form">
-          <h1>Shipping Details</h1>
-          <div class="login__group">
-            <label for="buynowEmail" class="login__label">Email</label>
-            <input
-              id="buynowEmail"
-              type="email"
-              class="login__input"
-              placeholder="Enter email here"
-              required
-            />
+    <div class="cart">
+      <div class="cart__contains container">
+        <div class="cart__itemsincart">
+          <div class="cart__rowheader">
+            <div class="cart__col cart__col--extra">Item</div>
+            <div class="cart__col">Unit Price</div>
+            <div class="cart__col">Quantity</div>
+            <div class="cart__col">Total</div>
           </div>
-          <div class="login__group">
-            <label for="buynowPhone" class="login__label">Phone no.</label>
-            <input
-              id="buynowPhone"
-              type="number"
-              class="login__input"
-              placeholder="Enter your Phone no."
-              required
-            />
-          </div>
-          <div class="login__group">
-            <label for="buynowAddress" class="login__label"
-              >Shipping Address</label
-            >
-            <input
-              id="buynowAddress"
-              type="text"
-              class="login__input"
-              placeholder="Enter your Full Address"
-              required
-            />
-          </div>
-          <button class="btn btn--search" id="saveBuynowShip">save</button>
-        </form>
-      </div>
-      <div class="checkout__payment">
-        <div class="checkout__summary">
-          <h1>Summary of Amount</h1>
-          <div class="checkout__itemsincart">
-            <div class="checkout__rowheader">Your Total Amount To be Paid</div>
-            <div class="cart__rows">Rs. <span id="totalbuynow"></span></div>
-          </div>
+          <div class="cart__rows" id="buyContainer"></div>
         </div>
 
-        <div id="paypal-button-container"></div>
+        <!-- summary section -->
+        <div class="cart__summary" id="summary">
+          <h1>Summary</h1>
+          <div class="cart__contain">
+            <div class="cart__block">
+              <div class="cart__label">Subtotal</div>
+              <p class="cart__price" id="buySubtotal">Rs. 0</p>
+            </div>
+            <div class="cart__block">
+              <div class="cart__label">Shipping</div>
+              <p class="cart__price" id="buyShipping">Rs. 0</p>
+            </div>
+            <div class="cart__block">
+              <div class="cart__label">VAT</div>
+              <p class="cart__price" id="buyVAT"></p>
+            </div>
+
+            <div class="cart__block">
+              <input
+                id="buyCoupoun"
+                type="text"
+                placeholder="Enter Coupoun"
+                class="cart__coupoun"
+              />
+              <button
+                class="btn btn--small"
+                type="submit"
+                onclick="addCoupoun()"
+              >
+                ADD
+              </button>
+            </div>
+            <div class="cart__block">
+              <div class="cart__label">Coupoun Discount</div>
+              <p id="buyDiscount">- Rs. 0</p>
+            </div>
+            <div class="cart__block">
+              <div class="cart__label">Total</div>
+              <p class="cart__price">Rs. <span id="buyTotal"></span></p>
+            </div>
+          </div>
+          <button class="btn btn--seemore" id="buyCheckout">Checkout</button>
+        </div>
       </div>
     </div>
 
@@ -207,7 +213,7 @@
           </div>
         </div>
       </div>
-      <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
+      <div class="footer__copyright">&copy; www.bookpur.com.np 2022</div>
     </footer>
   </body>
 

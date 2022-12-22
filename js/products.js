@@ -120,7 +120,10 @@ async function suggestedProduct() {
 
   buynowbtn.addEventListener('click', (e) => {
     e.preventDefault();
-    localStorage.setItem('buynowProduct', JSON.stringify(ourCurrentProduct));
+    localStorage.setItem(
+      'buynowProduct',
+      JSON.stringify({ ...ourCurrentProduct, numberOfUnits: 1 })
+    );
     window.location.replace('http://127.0.0.1:5500/pages/buynow.html');
   });
 
