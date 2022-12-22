@@ -55,20 +55,20 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 560px) {
   .filterbar {
     &__bars {
-      @include flexAround(center, center, row, 10);
+      @include flexAround(center, center, row, 30);
     }
 
     &__bar {
       width: 5.5rem;
       height: 1.5rem;
       font-size: 0.6rem;
-      padding: 0.2rem 0.2rem;
+      padding: 0.3rem 0.4rem;
 
       a {
-        margin-left: 0.5rem;
+        margin-left: 2.5rem;
       }
     }
 
@@ -79,10 +79,10 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 430px) {
   .filterbar {
     &__bars {
-      @include flexAround(center, center, row, 8);
+      @include flexAround(center, center, row, 20);
     }
 
     &__bar {

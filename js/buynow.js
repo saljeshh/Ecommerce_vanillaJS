@@ -1,21 +1,26 @@
-const totalPaymentAmount = JSON.parse(localStorage.getItem('totalPay'));
-const amount = totalPaymentAmount['totalAmount'];
-console.log(amount);
+const buynowItem = JSON.parse(localStorage.getItem('buynowProduct'));
+const buyprice = buynowItem['price'];
+const discountPercent = buynowItem['discountPercent'];
+const subPrice = buyprice - (buyprice * buynowItem['discountPercent']) / 100;
+const vatAddedPrice = subPrice + (subPrice * 13) / 100;
+const Total = vatAddedPrice + 120;
+console.log(Total);
 
-// for dom changing
-const totalCheckoutContainer = document.querySelector('#totalCheckout');
-totalCheckoutContainer.textContent = amount.toFixed(2);
+const totalCheckoutContainer = document.querySelector('#totalbuynow');
+
+totalCheckoutContainer.textContent = Total;
+
+// shipping details
 
 // for localstorage shipping addres
-const addBtn = document.querySelector('#saveShipDetail');
-const email = document.querySelector('#checkoutEmail');
-const phone = document.querySelector('#checkoutPhone');
-const address = document.querySelector('#checkoutAddress');
+const addBtn = document.querySelector('#saveBuynowShip');
+const email = document.querySelector('#buynowEmail');
+const phone = document.querySelector('#buynowPhone');
+const address = document.querySelector('#buynowAddress');
 
-let localShipDetail = JSON.parse(
-  localStorage.getItem('shippingCustomerDetails')
-);
-let shipDetail = [...localShipDetail] || [];
+let shipDetail = JSON.parse(localStorage.getItem('shippingCustomerDetails'));
+
+let newShipData = [...shipDetail] || [];
 
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -25,13 +30,12 @@ addBtn.addEventListener('click', (e) => {
     address: address.value,
   };
 
-  shipDetail.push(obj);
+  newShipData.push(obj);
 
-  localStorage.setItem('shippingCustomerDetails', JSON.stringify(shipDetail));
+  localStorage.setItem('shippingCustomerDetails', JSON.stringify(newShipData));
 });
 
-// for paypa
-
+//paypal
 const fundingSources = [paypal.FUNDING.PAYPAL];
 
 for (const fundingSource of fundingSources) {
@@ -53,7 +57,7 @@ for (const fundingSource of fundingSources) {
         purchase_units: [
           {
             amount: {
-              value: `${amount}`,
+              value: `${Total}`,
             },
           },
         ],

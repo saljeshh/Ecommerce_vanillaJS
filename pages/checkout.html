@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../sass/style.css" />
-    <title>Login</title>
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="manifest" href="../manifest.json" />
+    <title>Checkout</title>
   </head>
   <body>
     <header class="header">
@@ -80,9 +82,9 @@
         <form action="" class="login__form">
           <h1>Shipping Details</h1>
           <div class="login__group">
-            <label for="email" class="login__label">Email</label>
+            <label for="checkoutEmail" class="login__label">Email</label>
             <input
-              id="email"
+              id="checkoutEmail"
               type="email"
               class="login__input"
               placeholder="Enter email here"
@@ -90,9 +92,9 @@
             />
           </div>
           <div class="login__group">
-            <label for="phone" class="login__label">Phone no.</label>
+            <label for="checkoutPhone" class="login__label">Phone no.</label>
             <input
-              id="phone"
+              id="checkoutPhone"
               type="number"
               class="login__input"
               placeholder="Enter your Phone no."
@@ -100,21 +102,27 @@
             />
           </div>
           <div class="login__group">
-            <label for="address" class="login__label">Shipping Address</label>
+            <label for="checkoutAddress" class="login__label"
+              >Shipping Address</label
+            >
             <input
-              id="address"
+              id="checkoutAddress"
               type="text"
               class="login__input"
               placeholder="Enter your Full Address"
               required
             />
           </div>
+          <button class="btn btn--search" id="saveShipDetail">save</button>
         </form>
       </div>
       <div class="checkout__payment">
         <div class="checkout__summary">
-          <h1>Summary of Products</h1>
-          <div class="checkout__total">Rs. 14400</div>
+          <h1>Summary of Amount</h1>
+          <div class="checkout__itemsincart">
+            <div class="checkout__rowheader">Your Total Amount To be Paid</div>
+            <div class="cart__rows">Rs. <span id="totalCheckout"></span></div>
+          </div>
         </div>
 
         <div id="paypal-button-container"></div>
@@ -208,6 +216,5 @@
     data-sdk-integration-source="integrationbuilder"
   ></script>
   <script src="../js/payment.js"></script>
-  <script src="../js/cart.js"></script>
   <script src="../js/header.js"></script>
 </html>

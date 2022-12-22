@@ -27,7 +27,7 @@ a {
 }
 
 .container {
-  width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -46,12 +46,13 @@ a {
   }
 
   &--search {
-    padding: 0.34rem 1rem;
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
   }
 
   &--small {
-    font-size: 0.6rem;
-    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
   }
 
   &--feedback {
@@ -96,8 +97,8 @@ a {
 }
 
 .card {
-  width: 10rem;
-  height: 18rem;
+  width: 11.5rem;
+  height: 20rem;
   padding: 0.2rem 0.5rem;
   cursor: pointer;
   border: 1px solid transparent;
@@ -112,9 +113,10 @@ a {
 
   &__image {
     margin-bottom: 0.8rem;
+    height: 13rem;
     img {
       width: 100%;
-      height: 11rem;
+      height: 100%;
     }
   }
 
@@ -178,9 +180,9 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .container {
-    width: 700px;
+    max-width: 700px;
   }
 
   .btn {
@@ -195,6 +197,10 @@ a {
     &--seemore {
       padding: 0.4rem 0.6rem;
       font-size: 0.5rem;
+    }
+    &--small {
+      font-size: 0.6rem;
+      padding: 0.4rem 0.5rem;
     }
   }
 
@@ -212,22 +218,22 @@ a {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 560px) {
   .container {
-    width: 400px;
+    max-width: 520px;
   }
 
   .btn {
     &--search {
-      padding: 0.3rem 0.8rem;
-      font-size: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.6rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
     }
     &--seemore {
-      padding: 0.2rem 0.2rem;
-      font-size: 0.7rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.6rem;
     }
   }
 
@@ -251,32 +257,37 @@ a {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 430px) {
   .container {
-    width: 320px;
+    max-width: 360px;
   }
 
   .btn {
     &--search {
-      padding: 0.2rem 0.2rem;
-      font-size: 0.4rem;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.5rem;
     }
     &--feedback {
-      padding: 0.1rem 0.4rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.5rem;
     }
     &--seemore {
-      padding: 0.2rem 0.2rem;
-      font-size: 0.4rem;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.5rem;
+    }
+    &--small {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.8rem;
     }
   }
 
   .card {
     font-size: 0.6rem;
-    width: 9rem;
-    height: 15rem;
+    width: 10.5rem;
+    height: 18rem;
     &__image {
-      margin-bottom: 0.6rem;
-      height: 10rem;
+      margin-bottom: 0.8rem;
+      height: 12rem;
       img {
         width: 100%;
         height: 100%;
@@ -285,15 +296,15 @@ a {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .container {
-    width: 300px;
+    max-width: 310px;
   }
 
   .btn {
     &--search {
-      padding: 0.2rem 0.2rem;
-      font-size: 0.4rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.6rem;
     }
     &--feedback {
       padding: 0.1rem 0.4rem;
@@ -301,14 +312,18 @@ a {
 
     &--seemore {
       padding: 0.2rem 0.2rem;
-      font-size: 0.4rem;
+      font-size: 0.6rem;
+    }
+    &--small {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.8rem;
     }
   }
 
   .card {
     font-size: 0.6rem;
-    width: 8.5rem;
-    height: 15rem;
+    width: 9rem;
+    height: 16rem;
     &__image {
       margin-bottom: 0.6rem;
       height: 10rem;

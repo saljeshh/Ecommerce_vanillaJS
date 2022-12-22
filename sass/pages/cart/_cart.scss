@@ -1,11 +1,16 @@
 .cart {
   width: 100%;
   padding: 1rem 0.2rem;
+  font-size: 0.8rem;
+
+  &__label {
+    opacity: 0.7;
+  }
 
   &__contains {
     padding: 3rem 0.2rem;
     background-color: $color-background-white;
-    @include flexAround(space-around, flex-start, row, 20);
+    @include flexAround(space-around, center, row, 20);
   }
 
   &__rowheader {
@@ -28,12 +33,12 @@
     width: 5rem;
 
     &--extra {
-      width: 10rem;
+      width: 12rem;
     }
   }
 
   &__image {
-    width: 18px;
+    width: 1.3rem;
   }
 
   &__quantity {
@@ -60,18 +65,20 @@
   }
 
   &__summary {
-    background-color: $color-background-gray;
-    padding: 2rem 2rem;
+    background-color: $color-background-white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem 3rem;
     margin-top: 2rem;
     @include flexAround(center, center, column, 21);
   }
 
   &__coupoun {
     outline: none;
+    height: 1.8rem;
     font-size: 0.6rem;
     padding: 0.3rem 0.3rem;
     border: 1px solid $color-background-gray;
-    width: 70%;
+    width: 80%;
 
     &:hover,
     &:focus {
@@ -86,8 +93,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .cart {
+    font-size: 0.6rem;
     &__contains {
       padding: 3rem 0.2rem;
       @include flexAround(space-around, center, column, 20);
@@ -111,11 +119,15 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 560px) {
+}
+
+@media (max-width: 430px) {
   .cart {
+    font-size: 0.5rem;
     &__contains {
       padding: 0.1rem 0.1rem;
-      @include flexAround(space-around, center, column, 20);
+      @include flexAround(space-around, center, column, 10);
     }
     &__itemsincart {
       width: 100%;
@@ -129,16 +141,25 @@
     }
 
     &__summary {
-      width: 80%;
+      width: 100%;
       padding: 1rem 1rem;
       margin-top: 2rem;
       @include flexAround(center, center, column, 25);
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0);
+    }
+
+    &__coupoun {
+      height: 1.5rem;
+      font-size: 0.6rem;
+      padding: 0.3rem 0.3rem;
+      width: 100%;
     }
 
     &__block {
-      @include flexAround(space-between, center, row, 30);
+      width: 100%;
+      @include flexAround(space-between, center, row, null);
       margin-bottom: 0.5rem;
-      font-size: 0.8rem;
+      font-size: 0.6rem;
     }
     &__label {
       opacity: 0.7;
@@ -146,46 +167,9 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 322px) {
   .cart {
-    &__itemsincart {
-      font-size: 0.6rem;
-      width: 100%;
-      padding: 1rem 0.2rem;
-      min-height: 20rem;
-    }
-
-    &__row {
-      font-size: 0.5rem;
-      padding: 0.4rem 0.4rem;
-    }
-
-    &__rowheader {
-      padding: 0.5rem 0.2rem;
-      @include flexAround(space-around, center, row, 10);
-    }
-
-    &__btns {
-      width: 1rem;
-      height: 1rem;
-    }
-
-    &__summary {
-      width: 90%;
-      padding: 1rem 1rem;
-      margin: 1rem 0;
-    }
-
-    &__block {
-      @include flexAround(space-between, center, row, 10);
-      margin-bottom: 0.5rem;
-      font-size: 0.6rem;
-    }
-  }
-}
-
-@media (max-width: 320px) {
-  .cart {
+    font-size: 0.45rem;
     &__contains {
       padding: 0.1rem 0.1rem;
       @include flexAround(space-around, center, column, 20);
@@ -197,7 +181,14 @@
       min-height: 20rem;
     }
     &__image {
-      width: 1rem;
+      width: 0.8rem;
+    }
+
+    &__coupoun {
+      height: 1.5rem;
+      font-size: 0.6rem;
+      padding: 0.3rem 0.3rem;
+      width: 100%;
     }
 
     &__rowheader {
@@ -212,9 +203,10 @@
     }
 
     &__block {
-      @include flexAround(space-between, center, row, 30);
-      margin-bottom: 0.5rem;
-      font-size: 0.6rem;
+      width: 100%;
+      @include flexAround(space-between, center, row, null);
+      margin-bottom: 0.7rem;
+      font-size: 0.7rem;
     }
   }
 }

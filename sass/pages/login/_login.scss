@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .login {
     &__input {
       width: 15rem;
@@ -53,27 +53,7 @@
   }
 }
 
-@media (max-width: 450px) {
-  .login {
-    padding: 2rem 0.6rem;
-    &__label {
-      font-size: 0.6rem;
-    }
-
-    &__form {
-      padding: 2rem 2rem;
-    }
-
-    &__input {
-      width: 15rem;
-      padding: 0.5rem;
-      height: 1.5rem;
-      font-size: 0.5rem;
-    }
-  }
-}
-
-@media (max-width: 376px) {
+@media (max-width: 560px) {
   .login {
     padding: 2rem 0.6rem;
     &__label {
@@ -93,7 +73,27 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 430px) {
+  .login {
+    padding: 2rem 0.6rem;
+    &__label {
+      font-size: 0.6rem;
+    }
+
+    &__form {
+      padding: 2rem 2rem;
+    }
+
+    &__input {
+      width: 15rem;
+      padding: 0.5rem;
+      height: 2rem;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 321px) {
   .login {
     padding: 2rem 0.6rem;
     &__label {

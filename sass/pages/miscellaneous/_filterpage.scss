@@ -2,7 +2,7 @@
   margin-top: 2rem;
   &__cards {
     margin-top: 2rem;
-    @include flexAround(center, center, row, 20);
+    @include flexAround(flex-start, center, row, 20);
     flex-wrap: wrap;
     margin-bottom: 2rem;
   }

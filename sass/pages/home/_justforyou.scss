@@ -20,7 +20,7 @@
   }
 
   &__cards {
-    @include flexAround(flex-start, center, row, 27);
+    @include flexAround(flex-start, center, row, 19);
     flex-wrap: wrap;
   }
 }
@@ -34,7 +34,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .justforyou {
     &__cards {
       @include flexAround(flex-start, center, row, 15);
@@ -43,7 +43,16 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 560px) {
+  .justforyou {
+    &__cards {
+      @include flexAround(flex-start, center, row, 10);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 430px) {
   .justforyou {
     &__cards {
       @include flexAround(flex-start, center, row, 15);
@@ -55,7 +64,7 @@
 @media (max-width: 321px) {
   .justforyou {
     &__cards {
-      @include flexAround(flex-start, center, row, 26);
+      @include flexAround(flex-start, center, row, 20);
       flex-wrap: wrap;
     }
   }

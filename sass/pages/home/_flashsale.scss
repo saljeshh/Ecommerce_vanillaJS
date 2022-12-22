@@ -49,7 +49,7 @@
 
   // for cards area
   &__cards {
-    @include flexAround(flex-start, center, row, 20);
+    @include flexAround(flex-start, center, row, 19);
     flex-wrap: wrap;
   }
 }
@@ -61,20 +61,20 @@
     }
 
     &__cards {
-      @include flexAround(space-between, center, row, 10);
+      @include flexAround(flex-start, center, row, 17);
       flex-wrap: wrap;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .flash-sale {
     &__header {
       padding: 0.5rem 0.8rem;
     }
 
     &__cards {
-      @include flexAround(flex-start, center, row, 10);
+      @include flexAround(flex-start, center, row, 15);
       flex-wrap: wrap;
     }
 
@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 560px) {
   .flash-sale {
     &__header {
       padding: 0.5rem 0.7rem;
@@ -95,7 +95,7 @@
     }
 
     &__cards {
-      @include flexAround(flex-start, center, row, 15);
+      @include flexAround(flex-start, center, row, 10);
       flex-wrap: wrap;
     }
 
@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 430px) {
   .flash-sale {
     &__cards {
       @include flexAround(flex-start, center, row, 15);
@@ -127,7 +127,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .flash-sale {
     &__header {
       padding: 0.5rem 0.7rem;
@@ -138,7 +138,7 @@
     }
 
     &__cards {
-      @include flexAround(flex-start, center, row, 26);
+      @include flexAround(flex-start, center, row, 20);
       flex-wrap: wrap;
     }
 

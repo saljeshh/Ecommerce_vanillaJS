@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../sass/style.css" />
     <link rel="shortcut icon" href="../img/favicon.png" />
     <link rel="manifest" href="../manifest.json" />
-    <title>Error</title>
+    <title>Buy Now</title>
   </head>
   <body>
     <header class="header">
@@ -77,7 +77,57 @@
 
     <div class="dummy"></div>
 
-    <div class="error">Error 404</div>
+    <div class="checkout container">
+      <div class="checkout__shipping">
+        <form action="" class="login__form">
+          <h1>Shipping Details</h1>
+          <div class="login__group">
+            <label for="buynowEmail" class="login__label">Email</label>
+            <input
+              id="buynowEmail"
+              type="email"
+              class="login__input"
+              placeholder="Enter email here"
+              required
+            />
+          </div>
+          <div class="login__group">
+            <label for="buynowPhone" class="login__label">Phone no.</label>
+            <input
+              id="buynowPhone"
+              type="number"
+              class="login__input"
+              placeholder="Enter your Phone no."
+              required
+            />
+          </div>
+          <div class="login__group">
+            <label for="buynowAddress" class="login__label"
+              >Shipping Address</label
+            >
+            <input
+              id="buynowAddress"
+              type="text"
+              class="login__input"
+              placeholder="Enter your Full Address"
+              required
+            />
+          </div>
+          <button class="btn btn--search" id="saveBuynowShip">save</button>
+        </form>
+      </div>
+      <div class="checkout__payment">
+        <div class="checkout__summary">
+          <h1>Summary of Amount</h1>
+          <div class="checkout__itemsincart">
+            <div class="checkout__rowheader">Your Total Amount To be Paid</div>
+            <div class="cart__rows">Rs. <span id="totalbuynow"></span></div>
+          </div>
+        </div>
+
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="footer__newsletter">
@@ -159,7 +209,12 @@
       </div>
       <div class="footer__copyright">&copy; www.shipup.com.np 2022</div>
     </footer>
-
-    <script src="../js/header.js"></script>
   </body>
+
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AdR6Laok3Vo0Gb1dEq1LGgx2cxQCYt3dC6rQ8EJt3xLBW1466carnJGHVDM-xZ3uh_i5b3n_cAmnVQEK&currency=USD&intent=capture"
+    data-sdk-integration-source="integrationbuilder"
+  ></script>
+  <script src="../js/buynow.js"></script>
+  <script src="../js/header.js"></script>
 </html>

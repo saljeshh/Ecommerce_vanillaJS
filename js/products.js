@@ -78,7 +78,7 @@ async function displayProduct() {
       <h3 class="productdetail__desc">Product Description</h3>
       <article class="productdetail__specs">${product.description}</article>
       <div class="productdetail__buttons" id="productBtn">
-        <a href="../pages/checkout.html" class="btn btn--buynow">Buy Now</a>
+        <a href="../pages/buynow.html" id="buynow" class="btn btn--buynow">Buy Now</a>
         <a class="btn btn--addtocart" id="addtocart" onclick="addToCart(${
           product.id
         })">Add to Cart</a>
@@ -111,8 +111,18 @@ async function suggestedProduct() {
   newdata = await getData();
   let updateDom = '';
 
+  const buynowbtn = document.querySelector('#buynow');
+
   const ourCurrentProduct = newdata.find((item) => item.id === Number(pid));
-  // console.log(ourCurrentProduct);
+  console.log(ourCurrentProduct);
+
+  console.log(buynowbtn);
+
+  buynowbtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    localStorage.setItem('buynowProduct', JSON.stringify(ourCurrentProduct));
+    window.location.replace('http://127.0.0.1:5500/pages/buynow.html');
+  });
 
   const thisProductCategory = ourCurrentProduct['category'];
 
